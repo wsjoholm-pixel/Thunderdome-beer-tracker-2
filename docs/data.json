@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T19:16:56.695957+00:00",
+  "generated_at": "2026-09-28T19:29:57.122267+00:00",
   "league_id": 1515310,
   "year": 2026,
   "current_week": 3,
@@ -141,6 +141,13 @@
       "points": 2.0
     },
     {
+      "team": "Dumpster Fire",
+      "week": 1,
+      "player": "Titans D/ST",
+      "slot": "D/ST",
+      "points": -1.0
+    },
+    {
       "team": "Team ThunderCats",
       "week": 1,
       "player": "Ja'Marr Chase",
@@ -153,6 +160,13 @@
       "player": "Drake London",
       "slot": "WR",
       "points": 2.0
+    },
+    {
+      "team": "Team ThunderCats",
+      "week": 1,
+      "player": "Browns D/ST",
+      "slot": "D/ST",
+      "points": -1.0
     },
     {
       "team": "Team ShowHome",
