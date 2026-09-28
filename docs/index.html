@@ -20,24 +20,28 @@
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--cream); font-family: 'Work Sans', sans-serif; -webkit-font-smoothing: antialiased; }
   .wrap { max-width: 720px; margin: 0 auto; padding: 28px 20px 80px; }
-  .hero { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  .hero { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--line); margin-bottom: 8px; flex-wrap: wrap; }
+  .hero-stat { min-width: 0; }
   .hero-title { font-size: 15px; color: var(--sage); margin: 0 0 4px; }
   .hero-number { font-family: 'Teko', sans-serif; font-weight: 600; font-size: 84px; line-height: 0.85; color: var(--amber); margin: 0; }
+  .hero-stat.secondary .hero-number { font-size: 52px; color: var(--sage); }
   .hero-unit { font-size: 17px; color: var(--sage); margin-left: 6px; }
   .meta-line { font-size: 13px; color: var(--sage); margin: 0 0 28px; }
   .section-head { display: flex; justify-content: space-between; align-items: baseline; margin: 32px 0 12px; }
   .section-head h2 { font-size: 20px; margin: 0; font-weight: 600; }
   .standings { border-top: 1px solid var(--line); }
-  .standing-row { display: flex; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); cursor: pointer; }
-  .rank { font-family: 'Teko', sans-serif; font-size: 26px; color: var(--sage); width: 34px; flex-shrink: 0; }
-  .team-name { flex: 1; font-size: 16px; font-weight: 500; }
+  .standing-row { display: flex; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); cursor: pointer; gap: 12px; }
+  .rank { font-family: 'Teko', sans-serif; font-size: 26px; color: var(--sage); width: 28px; flex-shrink: 0; }
+  .team-logo { width: 34px; height: 34px; border-radius: 7px; object-fit: cover; flex-shrink: 0; background: var(--surface-raised); }
+  .team-logo-placeholder { width: 34px; height: 34px; border-radius: 7px; background: var(--surface-raised); flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Teko', sans-serif; font-size: 16px; color: var(--sage); }
+  .team-name { flex: 1; font-size: 16px; font-weight: 500; min-width: 0; }
   .team-sub { font-size: 12.5px; color: var(--sage); margin-top: 2px; }
   .owed-count { font-family: 'Teko', sans-serif; font-size: 32px; color: var(--amber); min-width: 56px; text-align: right; }
   .owed-count.zero { color: var(--sage); }
   .owed-count.high { color: var(--rust); }
-  .chevron { color: var(--sage); margin-left: 10px; font-size: 14px; transition: transform 0.15s ease; }
+  .chevron { color: var(--sage); margin-left: 4px; font-size: 14px; transition: transform 0.15s ease; flex-shrink: 0; }
   .chevron.open { transform: rotate(90deg); }
-  .log-list { padding: 4px 0 16px 34px; display: none; }
+  .log-list { padding: 4px 0 16px 46px; display: none; }
   .log-list.open { display: block; }
   .log-entry { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; border-bottom: 1px dashed var(--line); }
   .log-entry:last-child { border-bottom: none; }
@@ -51,15 +55,25 @@
   .footer-note { font-size: 12px; color: var(--sage); margin-top: 24px; line-height: 1.5; border-top: 1px solid var(--line); padding-top: 16px; }
   .sync-badge { font-size: 12px; color: var(--sage); }
   .sync-badge.error { color: var(--rust); }
+  .close-calls { border-top: 1px solid var(--line); }
+  .close-call-row { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .close-call-row:last-child { border-bottom: none; }
+  .close-call-points { font-family: 'Teko', sans-serif; font-size: 24px; color: var(--sage); min-width: 40px; text-align: right; }
+  .close-call-desc { flex: 1; }
+  .close-call-team { color: var(--sage); font-size: 12.5px; margin-top: 1px; }
 </style>
 </head>
 <body>
 
 <div class="wrap">
   <div class="hero">
-    <div>
+    <div class="hero-stat">
       <p class="hero-title">Still owed league-wide</p>
       <p class="hero-number" id="heroNumber">0<span class="hero-unit">beers</span></p>
+    </div>
+    <div class="hero-stat secondary">
+      <p class="hero-title">Total zeros this season</p>
+      <p class="hero-number" id="heroTotalNumber">0<span class="hero-unit">total</span></p>
     </div>
   </div>
   <p class="meta-line" id="metaLine">Loading…</p>
@@ -71,7 +85,13 @@
 
   <div class="standings" id="standings"></div>
 
-  <p class="footer-note">Checking a box marks it paid for the whole group, live — anyone with this page can check or uncheck. The owed counts themselves always reflect the full season as pulled from ESPN.</p>
+  <div class="section-head">
+    <h2>😬 Close calls</h2>
+  </div>
+  <p class="meta-line" style="margin-bottom:12px;">Started, and scored 3 points or fewer without hitting zero. So close.</p>
+  <div class="close-calls" id="closeCalls"></div>
+
+  <p class="footer-note">Checking a box marks it paid for the whole group, live — anyone with this page can check or uncheck. The counts above always reflect the full season as pulled from ESPN.</p>
 </div>
 
 <script type="module">
@@ -93,7 +113,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const paidCollection = collection(db, "paid");
 
-let seasonData = { teams: [], entries: [], generated_at: null, current_week: null };
+let seasonData = { teams: [], entries: [], close_calls: [], generated_at: null, current_week: null };
 let paidMap = {};
 let openTeam = null;
 let firestoreReady = false;
@@ -104,21 +124,35 @@ function escapeHtml(str) {
   return d.innerHTML;
 }
 
+function teamName(t) {
+  return typeof t === 'string' ? t : t.name;
+}
+
+function teamLogo(t) {
+  return typeof t === 'string' ? null : t.logo;
+}
+
 function setSyncBadge(text, isError) {
   const el = document.getElementById('syncBadge');
   el.textContent = text;
   el.className = 'sync-badge' + (isError ? ' error' : '');
 }
 
-function teamTotals(teamName) {
-  const teamEntries = seasonData.entries.filter(e => e.team === teamName);
+function teamTotals(name) {
+  const teamEntries = seasonData.entries.filter(e => e.team === name);
   const owedNotPaid = teamEntries.filter(e => !paidMap[e.id]).length;
   return { owed: owedNotPaid, total: teamEntries.length };
 }
 
+function initials(name) {
+  return name.split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase();
+}
+
 function render() {
   const totalOwed = seasonData.entries.filter(e => !paidMap[e.id]).length;
+  const totalSeason = seasonData.entries.length;
   document.getElementById('heroNumber').childNodes[0].textContent = totalOwed + ' ';
+  document.getElementById('heroTotalNumber').childNodes[0].textContent = totalSeason + ' ';
 
   const meta = document.getElementById('metaLine');
   if (seasonData.generated_at) {
@@ -128,6 +162,11 @@ function render() {
     meta.textContent = 'Waiting on the first automated pull from ESPN.';
   }
 
+  renderStandings();
+  renderCloseCalls();
+}
+
+function renderStandings() {
   const container = document.getElementById('standings');
   container.innerHTML = '';
 
@@ -137,7 +176,7 @@ function render() {
   }
 
   const ranked = seasonData.teams
-    .map(name => ({ name, ...teamTotals(name) }))
+    .map(t => ({ name: teamName(t), logo: teamLogo(t), ...teamTotals(teamName(t)) }))
     .sort((a, b) => b.owed - a.owed || a.name.localeCompare(b.name));
 
   ranked.forEach((team, i) => {
@@ -146,9 +185,14 @@ function render() {
     const countClass = team.owed === 0 ? 'zero' : (team.owed >= 4 ? 'high' : '');
     const isOpen = openTeam === team.name;
 
+    const logoHtml = team.logo
+      ? `<img class="team-logo" src="${escapeHtml(team.logo)}" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'), {className:'team-logo-placeholder', textContent:'${escapeHtml(initials(team.name))}'}))">`
+      : `<div class="team-logo-placeholder">${escapeHtml(initials(team.name))}</div>`;
+
     row.innerHTML = `
       <div class="rank">${i + 1}</div>
-      <div style="flex:1;">
+      ${logoHtml}
+      <div style="flex:1; min-width:0;">
         <div class="team-name">${escapeHtml(team.name)}</div>
         <div class="team-sub">${team.total} zero${team.total === 1 ? '' : 's'} logged this season</div>
       </div>
@@ -196,10 +240,37 @@ function render() {
   });
 }
 
+function renderCloseCalls() {
+  const container = document.getElementById('closeCalls');
+  container.innerHTML = '';
+
+  const closeCalls = seasonData.close_calls || [];
+  if (closeCalls.length === 0) {
+    container.innerHTML = `<div class="empty-state">No close calls yet this season.</div>`;
+    return;
+  }
+
+  const sorted = [...closeCalls].sort((a, b) => a.points - b.points || b.week - a.week);
+
+  sorted.slice(0, 25).forEach(cc => {
+    const row = document.createElement('div');
+    row.className = 'close-call-row';
+    row.innerHTML = `
+      <div class="close-call-points">${cc.points}</div>
+      <div class="close-call-desc">
+        ${escapeHtml(cc.player)}${cc.slot ? ' (' + escapeHtml(cc.slot) + ')' : ''}
+        <div class="close-call-team">${escapeHtml(cc.team)} · Wk ${cc.week}</div>
+      </div>
+    `;
+    container.appendChild(row);
+  });
+}
+
 async function loadSeasonData() {
   try {
     const res = await fetch('./data.json', { cache: 'no-store' });
     seasonData = await res.json();
+    if (!seasonData.close_calls) seasonData.close_calls = [];
   } catch (e) {
     document.getElementById('metaLine').textContent = 'Could not load data.json.';
   }
@@ -228,4 +299,5 @@ subscribeToPaidStatus();
 </script>
 
 </body>
+</html>
 </html>
