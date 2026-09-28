@@ -250,7 +250,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 12px 0 4px;
+    padding: 12px 0;
+    cursor: pointer;
   }
 
   .cc-team-header .team-logo,
@@ -265,7 +266,19 @@
     font-size: 14px;
     font-weight: 600;
     color: var(--sage);
+    flex: 1;
   }
+
+  .cc-count-badge {
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+    color: var(--sage);
+  }
+
+  .cc-log-list {
+    display: none;
+  }
+  .cc-log-list.open { display: block; }
 
   .close-call-row {
     display: flex;
@@ -312,7 +325,7 @@
   <div class="section-head">
     <h2>😬 Close calls</h2>
   </div>
-  <p class="meta-line" style="margin-bottom:12px;">Started, and scored 3 points or fewer without hitting zero. So close.</p>
+  <p class="meta-line" style="margin-bottom:12px;">Started, and scored within 3 points of zero either direction, without actually hitting zero. So close.</p>
   <div class="close-calls" id="closeCalls"></div>
 
   <p class="footer-note">Checking a box marks it paid for the whole group, live — anyone with this page can check or uncheck. If a checkbox doesn't stick after a refresh, that means the sync failed silently before — watch for an error message under the row when you click, or the sync badge above the standings. The counts above always reflect the full season as pulled from ESPN.</p>
@@ -338,7 +351,7 @@ const INCLUDED_TEAMS = [
   "Sam -Bo- Jangles",
   "Team Autopilot",
   "Grit City Bridge Builders",
-  "Booty Goon Squad",
+  "Booty  Goon Squad",
   "Robs Team"
 ];
 
@@ -349,6 +362,7 @@ const paidCollection = collection(db, "paid");
 let seasonData = { teams: [], entries: [], close_calls: [], generated_at: null, current_week: null };
 let paidMap = {};
 let openTeam = null;
+let openCloseCallTeam = null;
 let firestoreReady = false;
 
 function escapeHtml(str) {
@@ -524,14 +538,24 @@ function renderCloseCalls() {
   teamOrder.forEach(name => {
     const group = document.createElement('div');
     group.className = 'cc-team-group';
+    const isOpen = openCloseCallTeam === name;
 
     const header = document.createElement('div');
     header.className = 'cc-team-header';
     header.innerHTML = `
       ${logoHtmlFor(name, teamMeta[name], 'team-logo')}
       <span class="cc-team-header-name">${escapeHtml(name)}</span>
+      <span class="cc-count-badge">${byTeam[name].length}</span>
+      <div class="chevron ${isOpen ? 'open' : ''}">▸</div>
     `;
+    header.addEventListener('click', () => {
+      openCloseCallTeam = isOpen ? null : name;
+      renderCloseCalls();
+    });
     group.appendChild(header);
+
+    const logWrap = document.createElement('div');
+    logWrap.className = 'cc-log-list' + (isOpen ? ' open' : '');
 
     const sorted = [...byTeam[name]].sort((a, b) => a.points - b.points || b.week - a.week);
     sorted.forEach(cc => {
@@ -544,8 +568,9 @@ function renderCloseCalls() {
           <span class="close-call-week"> · Wk ${cc.week}</span>
         </div>
       `;
-      group.appendChild(row);
+      logWrap.appendChild(row);
     });
+    group.appendChild(logWrap);
 
     container.appendChild(group);
   });
