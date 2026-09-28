@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zero Point Tally</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #17261C;
+    --surface: #22342A;
+    --surface-raised: #2A3D31;
+    --line: #35493C;
+    --amber: #E8A33D;
+    --cream: #F3EFE2;
+    --sage: #8BA093;
+    --rust: #D9633B;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--cream); font-family: 'Work Sans', sans-serif; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 28px 20px 80px; }
+  .hero { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; padding-bottom: 20px; border-bottom: 1px solid var(--line); margin-bottom: 8px; }
+  .hero-title { font-size: 15px; color: var(--sage); margin: 0 0 4px; }
+  .hero-number { font-family: 'Teko', sans-serif; font-weight: 600; font-size: 84px; line-height: 0.85; color: var(--amber); margin: 0; }
+  .hero-unit { font-size: 17px; color: var(--sage); margin-left: 6px; }
+  .meta-line { font-size: 13px; color: var(--sage); margin: 0 0 28px; }
+  .section-head { display: flex; justify-content: space-between; align-items: baseline; margin: 32px 0 12px; }
+  .section-head h2 { font-size: 20px; margin: 0; font-weight: 600; }
+  .standings { border-top: 1px solid var(--line); }
+  .standing-row { display: flex; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--line); cursor: pointer; }
+  .rank { font-family: 'Teko', sans-serif; font-size: 26px; color: var(--sage); width: 34px; flex-shrink: 0; }
+  .team-name { flex: 1; font-size: 16px; font-weight: 500; }
+  .team-sub { font-size: 12.5px; color: var(--sage); margin-top: 2px; }
+  .owed-count { font-family: 'Teko', sans-serif; font-size: 32px; color: var(--amber); min-width: 56px; text-align: right; }
+  .owed-count.zero { color: var(--sage); }
+  .owed-count.high { color: var(--rust); }
+  .chevron { color: var(--sage); margin-left: 10px; font-size: 14px; transition: transform 0.15s ease; }
+  .chevron.open { transform: rotate(90deg); }
+  .log-list { padding: 4px 0 16px 34px; display: none; }
+  .log-list.open { display: block; }
+  .log-entry { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 14px; border-bottom: 1px dashed var(--line); }
+  .log-entry:last-child { border-bottom: none; }
+  .log-entry.paid { opacity: 0.45; }
+  .log-entry.paid .log-desc { text-decoration: line-through; }
+  .log-entry.syncing { opacity: 0.7; }
+  .log-desc { flex: 1; }
+  .log-week { color: var(--sage); }
+  .log-checkbox { width: 17px; height: 17px; accent-color: var(--amber); cursor: pointer; flex-shrink: 0; }
+  .empty-state { padding: 28px 0; color: var(--sage); font-size: 15px; text-align: center; border-top: 1px solid var(--line); }
+  .footer-note { font-size: 12px; color: var(--sage); margin-top: 24px; line-height: 1.5; border-top: 1px solid var(--line); padding-top: 16px; }
+  .sync-badge { font-size: 12px; color: var(--sage); }
+  .sync-badge.error { color: var(--rust); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <p class="hero-title">Still owed league-wide</p>
+      <p class="hero-number" id="heroNumber">0<span class="hero-unit">beers</span></p>
+    </div>
+  </div>
+  <p class="meta-line" id="metaLine">Loading…</p>
+
+  <div class="section-head">
+    <h2>Standings</h2>
+    <span class="sync-badge" id="syncBadge"></span>
+  </div>
+
+  <div class="standings" id="standings"></div>
+
+  <p class="footer-note">Checking a box marks it paid for the whole group, live — anyone with this page can check or uncheck. The owed counts themselves always reflect the full season as pulled from ESPN.</p>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import {
+  getFirestore, collection, doc, setDoc, onSnapshot
+} from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "YOUR_PROJECT",
+  storageBucket: "YOUR_PROJECT.appspot.com",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const paidCollection = collection(db, "paid");
+
+let seasonData = { teams: [], entries: [], generated_at: null, current_week: null };
+let paidMap = {};
+let openTeam = null;
+let firestoreReady = false;
+
+function escapeHtml(str) {
+  const d = document.createElement('div');
+  d.textContent = str;
+  return d.innerHTML;
+}
+
+function setSyncBadge(text, isError) {
+  const el = document.getElementById('syncBadge');
+  el.textContent = text;
+  el.className = 'sync-badge' + (isError ? ' error' : '');
+}
+
+function teamTotals(teamName) {
+  const teamEntries = seasonData.entries.filter(e => e.team === teamName);
+  const owedNotPaid = teamEntries.filter(e => !paidMap[e.id]).length;
+  return { owed: owedNotPaid, total: teamEntries.length };
+}
+
+function render() {
+  const totalOwed = seasonData.entries.filter(e => !paidMap[e.id]).length;
+  document.getElementById('heroNumber').childNodes[0].textContent = totalOwed + ' ';
+
+  const meta = document.getElementById('metaLine');
+  if (seasonData.generated_at) {
+    const dt = new Date(seasonData.generated_at);
+    meta.textContent = `Through week ${seasonData.current_week != null ? seasonData.current_week - 1 : '—'} · updated ${dt.toLocaleString()}`;
+  } else {
+    meta.textContent = 'Waiting on the first automated pull from ESPN.';
+  }
+
+  const container = document.getElementById('standings');
+  container.innerHTML = '';
+
+  if (seasonData.teams.length === 0) {
+    container.innerHTML = `<div class="empty-state">No data yet — this fills in automatically once the scheduled job has run.</div>`;
+    return;
+  }
+
+  const ranked = seasonData.teams
+    .map(name => ({ name, ...teamTotals(name) }))
+    .sort((a, b) => b.owed - a.owed || a.name.localeCompare(b.name));
+
+  ranked.forEach((team, i) => {
+    const row = document.createElement('div');
+    row.className = 'standing-row';
+    const countClass = team.owed === 0 ? 'zero' : (team.owed >= 4 ? 'high' : '');
+    const isOpen = openTeam === team.name;
+
+    row.innerHTML = `
+      <div class="rank">${i + 1}</div>
+      <div style="flex:1;">
+        <div class="team-name">${escapeHtml(team.name)}</div>
+        <div class="team-sub">${team.total} zero${team.total === 1 ? '' : 's'} logged this season</div>
+      </div>
+      <div class="owed-count ${countClass}">${team.owed}</div>
+      <div class="chevron ${isOpen ? 'open' : ''}">▸</div>
+    `;
+    row.addEventListener('click', () => {
+      openTeam = isOpen ? null : team.name;
+      render();
+    });
+    container.appendChild(row);
+
+    const logWrap = document.createElement('div');
+    logWrap.className = 'log-list' + (isOpen ? ' open' : '');
+    const teamEntries = seasonData.entries
+      .filter(e => e.team === team.name)
+      .sort((a, b) => b.week - a.week);
+
+    if (teamEntries.length === 0) {
+      logWrap.innerHTML = `<div style="color:var(--sage); font-size:14px; padding:8px 0;">No zeros logged for this team.</div>`;
+    } else {
+      teamEntries.forEach(entry => {
+        const paid = !!paidMap[entry.id];
+        const line = document.createElement('div');
+        line.className = 'log-entry' + (paid ? ' paid' : '');
+        line.innerHTML = `
+          <input type="checkbox" class="log-checkbox" ${paid ? 'checked' : ''} ${firestoreReady ? '' : 'disabled'}>
+          <div class="log-desc"><span class="log-week">Wk ${entry.week}</span> — ${escapeHtml(entry.player)}${entry.slot ? ' (' + escapeHtml(entry.slot) + ')' : ''}</div>
+        `;
+        line.querySelector('.log-checkbox').addEventListener('click', async (ev) => {
+          ev.stopPropagation();
+          const checked = ev.target.checked;
+          line.classList.add('syncing');
+          try {
+            await setDoc(doc(paidCollection, entry.id), { paid: checked, updatedAt: Date.now() });
+          } catch (e) {
+            setSyncBadge('Could not sync — try again', true);
+            ev.target.checked = !checked;
+          }
+        });
+        logWrap.appendChild(line);
+      });
+    }
+    container.appendChild(logWrap);
+  });
+}
+
+async function loadSeasonData() {
+  try {
+    const res = await fetch('./data.json', { cache: 'no-store' });
+    seasonData = await res.json();
+  } catch (e) {
+    document.getElementById('metaLine').textContent = 'Could not load data.json.';
+  }
+  render();
+}
+
+function subscribeToPaidStatus() {
+  setSyncBadge('Connecting…');
+  onSnapshot(paidCollection, (snapshot) => {
+    const next = {};
+    snapshot.forEach(docSnap => {
+      next[docSnap.id] = !!docSnap.data().paid;
+    });
+    paidMap = next;
+    firestoreReady = true;
+    setSyncBadge('Live');
+    render();
+  }, (err) => {
+    console.error(err);
+    setSyncBadge('Sync unavailable — check Firebase setup', true);
+  });
+}
+
+loadSeasonData();
+subscribeToPaidStatus();
+</script>
+
+</body>
+</html>
