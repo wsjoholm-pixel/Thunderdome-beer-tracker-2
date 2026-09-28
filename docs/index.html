@@ -438,7 +438,7 @@ function renderStandings() {
 
   const ranked = includedTeams
     .map(t => ({ name: teamName(t), logo: teamLogo(t), ...teamTotals(teamName(t)) }))
-    .sort((a, b) => b.owed - a.owed || a.name.localeCompare(b.name));
+    .sort((a, b) => b.total - a.total || a.name.localeCompare(b.name));
 
   ranked.forEach((team, i) => {
     const row = document.createElement('div');
