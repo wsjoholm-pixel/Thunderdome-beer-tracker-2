@@ -562,7 +562,7 @@ function renderCloseCalls() {
       const row = document.createElement('div');
       row.className = 'close-call-row';
       row.innerHTML = `
-        <div class="close-call-points">${cc.points}</div>
+                <div class="close-call-points">${cc.points}<span style="font-size:11px; color:var(--sage); font-family:'Work Sans',sans-serif;"> pts</span></div>
         <div class="close-call-desc">
           ${escapeHtml(cc.player)}${cc.slot ? ' (' + escapeHtml(cc.slot) + ')' : ''}
           <span class="close-call-week"> · Wk ${cc.week}</span>
