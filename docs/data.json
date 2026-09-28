@@ -1,21 +1,57 @@
 {
-  "generated_at": "2026-09-28T17:56:33.496938+00:00",
+  "generated_at": "2026-09-28T18:51:56.230119+00:00",
   "league_id": 1515310,
   "year": 2026,
   "current_week": 3,
   "teams": [
-    "Fantasy Football Team",
-    "Robs Team",
-    "Grit City Bridge Builders",
-    "Booty  Goon Squad",
-    "Team Smelliot",
-    "Team Autopilot",
-    "Gruck Around and Find Out",
-    "Sam -Bo- Jangles",
-    "Team Thunderpants",
-    "Dumpster Fire",
-    "Team ShowHome",
-    "Team ThunderCats"
+    {
+      "name": "Fantasy Football Team",
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/BoneHeads-ToddDetwiler/BoneHeads-06.svg"
+    },
+    {
+      "name": "Robs Team",
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-08.svg"
+    },
+    {
+      "name": "Grit City Bridge Builders",
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/68731340-7244-11f0-89a4-9ba80f933b95"
+    },
+    {
+      "name": "Booty  Goon Squad",
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/MickeyAndDonald-Disney/Disney-06.svg"
+    },
+    {
+      "name": "Team Smelliot",
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/core/ESPN_Avengers_Pack/10-ESPN_AVG_Rocket-01.svg"
+    },
+    {
+      "name": "Team Autopilot",
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/core/StarWarsTheRiseOfSkywalker/rise-skywalker-c3po.svg"
+    },
+    {
+      "name": "Gruck Around and Find Out",
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/core/StarWarsTheRiseOfSkywalker/rise-skywalker-zorri.svg"
+    },
+    {
+      "name": "Sam -Bo- Jangles",
+      "logo": "https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_05a.svg"
+    },
+    {
+      "name": "Team Thunderpants",
+      "logo": "https://g.espncdn.com/s/ffllm/logos/GridironWarriors-MartinLaksman/warriors-17.svg"
+    },
+    {
+      "name": "Dumpster Fire",
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/8bitHeros-JoeyEllis/8bit_football-06.svg"
+    },
+    {
+      "name": "Team ShowHome",
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_10.svg"
+    },
+    {
+      "name": "Team ThunderCats",
+      "logo": "https://images.all-free-download.com/images/graphiclarge/thundercats_72985.jpg"
+    }
   ],
   "entries": [
     {
@@ -80,6 +116,274 @@
       "week": 2,
       "player": "Dallas Goedert",
       "slot": "TE"
+    }
+  ],
+  "close_calls": [
+    {
+      "team": "Robs Team",
+      "week": 1,
+      "player": "George Pickens",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team": "Robs Team",
+      "week": 1,
+      "player": "MarShawn Lloyd",
+      "slot": "RB",
+      "points": 3.0
+    },
+    {
+      "team": "Dumpster Fire",
+      "week": 1,
+      "player": "Harold Fannin Jr.",
+      "slot": "TE",
+      "points": 2.0
+    },
+    {
+      "team": "Team ThunderCats",
+      "week": 1,
+      "player": "Ja'Marr Chase",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team": "Team ThunderCats",
+      "week": 1,
+      "player": "Drake London",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team": "Team ShowHome",
+      "week": 1,
+      "player": "Davante Adams",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team": "Team ShowHome",
+      "week": 1,
+      "player": "Hunter Henry",
+      "slot": "TE",
+      "points": 2.0
+    },
+    {
+      "team": "Team Thunderpants",
+      "week": 1,
+      "player": "Courtland Sutton",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team": "Grit City Bridge Builders",
+      "week": 1,
+      "player": "J.K. Dobbins",
+      "slot": "RB/WR/TE",
+      "points": 3.0
+    },
+    {
+      "team": "Grit City Bridge Builders",
+      "week": 1,
+      "player": "Rams D/ST",
+      "slot": "D/ST",
+      "points": 1.0
+    },
+    {
+      "team": "Team Autopilot",
+      "week": 1,
+      "player": "Harrison Mevis",
+      "slot": "K",
+      "points": 1.0
+    },
+    {
+      "team": "Sam -Bo- Jangles",
+      "week": 1,
+      "player": "Rico Dowdle",
+      "slot": "RB/WR/TE",
+      "points": 1.0
+    },
+    {
+      "team": "Sam -Bo- Jangles",
+      "week": 1,
+      "player": "Marvin Harrison Jr.",
+      "slot": "WR",
+      "points": 3.0
+    },
+    {
+      "team": "Gruck Around and Find Out",
+      "week": 1,
+      "player": "Broncos D/ST",
+      "slot": "D/ST",
+      "points": 2.0
+    },
+    {
+      "team": "Booty  Goon Squad",
+      "week": 1,
+      "player": "George Kittle",
+      "slot": "TE",
+      "points": 1.0
+    },
+    {
+      "team": "Booty  Goon Squad",
+      "week": 1,
+      "player": "Cameron Dicker",
+      "slot": "K",
+      "points": 2.0
+    },
+    {
+      "team": "Team Smelliot",
+      "week": 1,
+      "player": "A.J. Brown",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team": "Team Smelliot",
+      "week": 1,
+      "player": "Terry McLaurin",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team": "Team Smelliot",
+      "week": 1,
+      "player": "Tony Pollard",
+      "slot": "RB/WR/TE",
+      "points": 3.0
+    },
+    {
+      "team": "Team Smelliot",
+      "week": 1,
+      "player": "Brandon Aubrey",
+      "slot": "K",
+      "points": 2.0
+    },
+    {
+      "team": "Dumpster Fire",
+      "week": 2,
+      "player": "Tyler Allgeier",
+      "slot": "RB/WR/TE",
+      "points": 1.0
+    },
+    {
+      "team": "Dumpster Fire",
+      "week": 2,
+      "player": "Chiefs D/ST",
+      "slot": "D/ST",
+      "points": 1.0
+    },
+    {
+      "team": "Team ShowHome",
+      "week": 2,
+      "player": "Saquon Barkley",
+      "slot": "RB",
+      "points": 1.0
+    },
+    {
+      "team": "Team ShowHome",
+      "week": 2,
+      "player": "Jadarian Price",
+      "slot": "RB/WR/TE",
+      "points": 3.0
+    },
+    {
+      "team": "Team Thunderpants",
+      "week": 2,
+      "player": "Courtland Sutton",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team": "Robs Team",
+      "week": 2,
+      "player": "Ladd McConkey",
+      "slot": "RB/WR/TE",
+      "points": 3.0
+    },
+    {
+      "team": "Robs Team",
+      "week": 2,
+      "player": "Isaiah Likely",
+      "slot": "TE",
+      "points": 3.0
+    },
+    {
+      "team": "Team Autopilot",
+      "week": 2,
+      "player": "Kyle Pitts Sr.",
+      "slot": "TE",
+      "points": 1.0
+    },
+    {
+      "team": "Team Autopilot",
+      "week": 2,
+      "player": "Harrison Mevis",
+      "slot": "K",
+      "points": 3.0
+    },
+    {
+      "team": "Team ThunderCats",
+      "week": 2,
+      "player": "Rhamondre Stevenson",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team": "Team ThunderCats",
+      "week": 2,
+      "player": "Kaelon Black",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team": "Gruck Around and Find Out",
+      "week": 2,
+      "player": "DK Metcalf",
+      "slot": "RB/WR/TE",
+      "points": 2.0
+    },
+    {
+      "team": "Gruck Around and Find Out",
+      "week": 2,
+      "player": "Deebo Samuel Sr.",
+      "slot": "WR",
+      "points": 3.0
+    },
+    {
+      "team": "Fantasy Football Team",
+      "week": 2,
+      "player": "David Montgomery",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team": "Team Smelliot",
+      "week": 2,
+      "player": "Jeremiyah Love",
+      "slot": "RB",
+      "points": 3.0
+    },
+    {
+      "team": "Grit City Bridge Builders",
+      "week": 2,
+      "player": "J.K. Dobbins",
+      "slot": "RB/WR/TE",
+      "points": 3.0
+    },
+    {
+      "team": "Grit City Bridge Builders",
+      "week": 2,
+      "player": "Alec Pierce",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team": "Booty  Goon Squad",
+      "week": 2,
+      "player": "Cameron Dicker",
+      "slot": "K",
+      "points": 1.0
     }
   ]
 }
