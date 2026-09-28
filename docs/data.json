@@ -1,8 +1,85 @@
 {
-  "generated_at": null,
-  "league_id": null,
-  "year": null,
-  "current_week": null,
-  "teams": [],
-  "entries": []
+  "generated_at": "2026-09-28T17:56:33.496938+00:00",
+  "league_id": 1515310,
+  "year": 2026,
+  "current_week": 3,
+  "teams": [
+    "Fantasy Football Team",
+    "Robs Team",
+    "Grit City Bridge Builders",
+    "Booty  Goon Squad",
+    "Team Smelliot",
+    "Team Autopilot",
+    "Gruck Around and Find Out",
+    "Sam -Bo- Jangles",
+    "Team Thunderpants",
+    "Dumpster Fire",
+    "Team ShowHome",
+    "Team ThunderCats"
+  ],
+  "entries": [
+    {
+      "id": "1_1_4723086_TE",
+      "team": "Fantasy Football Team",
+      "week": 1,
+      "player": "Colston Loveland",
+      "slot": "TE"
+    },
+    {
+      "id": "10_1_-16024_D/ST",
+      "team": "Team Thunderpants",
+      "week": 1,
+      "player": "Chargers D/ST",
+      "slot": "D/ST"
+    },
+    {
+      "id": "7_1_4372016_RB/WR/TE",
+      "team": "Team Autopilot",
+      "week": 1,
+      "player": "Jaylen Waddle",
+      "slot": "RB/WR/TE"
+    },
+    {
+      "id": "7_1_4360248_TE",
+      "team": "Team Autopilot",
+      "week": 1,
+      "player": "Kyle Pitts Sr.",
+      "slot": "TE"
+    },
+    {
+      "id": "1_2_4426515_RB/WR/TE",
+      "team": "Fantasy Football Team",
+      "week": 2,
+      "player": "Puka Nacua",
+      "slot": "RB/WR/TE"
+    },
+    {
+      "id": "1_2_4723086_TE",
+      "team": "Fantasy Football Team",
+      "week": 2,
+      "player": "Colston Loveland",
+      "slot": "TE"
+    },
+    {
+      "id": "3_2_3915416_WR",
+      "team": "Grit City Bridge Builders",
+      "week": 2,
+      "player": "DJ Moore",
+      "slot": "WR"
+    },
+    {
+      "id": "9_2_4595348_WR",
+      "team": "Sam -Bo- Jangles",
+      "week": 2,
+      "player": "Malik Nabers",
+      "slot": "WR"
+    },
+    {
+      "id": "9_2_3121023_TE",
+      "team": "Sam -Bo- Jangles",
+      "week": 2,
+      "player": "Dallas Goedert",
+      "slot": "TE"
+    }
+  ]
 }
