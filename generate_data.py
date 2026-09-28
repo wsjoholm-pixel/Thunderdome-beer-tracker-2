@@ -14,7 +14,11 @@ ESPN_S2 = os.environ.get("ESPN_S2") or None
 ESPN_SWID = os.environ.get("ESPN_SWID") or None
 
 NON_STARTING_SLOTS = {"BE", "IR", "IR+"}
-CLOSE_CALL_MAX_POINTS = 3
+
+# Starters who scored within this many points of zero (either direction,
+# excluding exactly 0, which counts as a full zero instead) count as a
+# "close call" -- e.g. 3 means anything from -3 to 3 excluding 0.
+CLOSE_CALL_RANGE = 3
 
 OUTPUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "docs", "data.json")
 
@@ -63,7 +67,7 @@ def collect_entries(league: League):
                             "player": player.name,
                             "slot": player.slot_position,
                         })
-                    elif 0 < player.points <= CLOSE_CALL_MAX_POINTS:
+                    elif player.points != 0 and abs(player.points) <= CLOSE_CALL_RANGE:
                         close_calls.append({
                             "team": team.team_name,
                             "week": week,
