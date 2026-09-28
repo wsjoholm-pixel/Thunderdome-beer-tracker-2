@@ -1,6 +1,6 @@
 """
-Generates docs/data.json: the full season's history of zero-point starters,
-recomputed fresh from ESPN on every run.
+Generates docs/data.json: the full season's history of zero-point starters
+(plus near-misses and team logos), recomputed fresh from ESPN on every run.
 """
 
 import os
@@ -14,6 +14,7 @@ ESPN_S2 = os.environ.get("ESPN_S2") or None
 ESPN_SWID = os.environ.get("ESPN_SWID") or None
 
 NON_STARTING_SLOTS = {"BE", "IR", "IR+"}
+CLOSE_CALL_MAX_POINTS = 3
 
 OUTPUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "docs", "data.json")
 
@@ -27,7 +28,8 @@ def get_league() -> League:
 
 
 def collect_entries(league: League):
-    entries = []
+    zeros = []
+    close_calls = []
     last_completed_week = max(league.current_week - 1, 0)
 
     for week in range(1, last_completed_week + 1):
@@ -49,22 +51,36 @@ def collect_entries(league: League):
                     if player.slot_position in NON_STARTING_SLOTS:
                         continue
                     game_played = getattr(player, "game_played", 100)
-                    if game_played == 100 and player.points == 0:
+                    if game_played != 100:
+                        continue
+
+                    if player.points == 0:
                         entry_id = f"{team.team_id}_{week}_{getattr(player, 'playerId', player.name)}_{player.slot_position}"
-                        entries.append({
+                        zeros.append({
                             "id": entry_id,
                             "team": team.team_name,
                             "week": week,
                             "player": player.name,
                             "slot": player.slot_position,
                         })
-    return entries
+                    elif 0 < player.points <= CLOSE_CALL_MAX_POINTS:
+                        close_calls.append({
+                            "team": team.team_name,
+                            "week": week,
+                            "player": player.name,
+                            "slot": player.slot_position,
+                            "points": round(player.points, 1),
+                        })
+    return zeros, close_calls
 
 
 def main():
     league = get_league()
-    teams = [t.team_name for t in league.teams]
-    entries = collect_entries(league)
+    teams = [
+        {"name": t.team_name, "logo": getattr(t, "logo_url", None) or None}
+        for t in league.teams
+    ]
+    entries, close_calls = collect_entries(league)
 
     data = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -73,13 +89,14 @@ def main():
         "current_week": league.current_week,
         "teams": teams,
         "entries": entries,
+        "close_calls": close_calls,
     }
 
     os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
     with open(OUTPUT_PATH, "w") as f:
         json.dump(data, f, indent=2)
 
-    print(f"Wrote {len(entries)} entries for {len(teams)} teams to {OUTPUT_PATH}")
+    print(f"Wrote {len(entries)} zeros and {len(close_calls)} close calls for {len(teams)} teams to {OUTPUT_PATH}")
 
 
 if __name__ == "__main__":
