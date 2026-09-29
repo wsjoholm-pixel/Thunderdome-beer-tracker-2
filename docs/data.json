@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-28T19:39:57.914931+00:00",
+  "generated_at": "2026-09-29T13:15:27.015703+00:00",
   "league_id": 1515310,
   "year": 2026,
-  "current_week": 3,
+  "current_week": 4,
   "teams": [
     {
       "name": "Fantasy Football Team",
@@ -116,6 +116,48 @@
       "week": 2,
       "player": "Dallas Goedert",
       "slot": "TE"
+    },
+    {
+      "id": "11_3_4432773_RB/WR/TE",
+      "team": "Dumpster Fire",
+      "week": 3,
+      "player": "Brian Thomas Jr.",
+      "slot": "RB/WR/TE"
+    },
+    {
+      "id": "12_3_3046439_TE",
+      "team": "Team ShowHome",
+      "week": 3,
+      "player": "Hunter Henry",
+      "slot": "TE"
+    },
+    {
+      "id": "7_3_4360248_TE",
+      "team": "Team Autopilot",
+      "week": 3,
+      "player": "Kyle Pitts Sr.",
+      "slot": "TE"
+    },
+    {
+      "id": "8_3_4242433_RB/WR/TE",
+      "team": "Gruck Around and Find Out",
+      "week": 3,
+      "player": "Joshua Palmer",
+      "slot": "RB/WR/TE"
+    },
+    {
+      "id": "13_3_-16025_D/ST",
+      "team": "Team ThunderCats",
+      "week": 3,
+      "player": "49ers D/ST",
+      "slot": "D/ST"
+    },
+    {
+      "id": "1_3_-16004_D/ST",
+      "team": "Fantasy Football Team",
+      "week": 3,
+      "player": "Bengals D/ST",
+      "slot": "D/ST"
     }
   ],
   "close_calls": [
@@ -398,6 +440,111 @@
       "player": "Cameron Dicker",
       "slot": "K",
       "points": 1.0
+    },
+    {
+      "team": "Team ShowHome",
+      "week": 3,
+      "player": "Jadarian Price",
+      "slot": "RB/WR/TE",
+      "points": -1.0
+    },
+    {
+      "team": "Team ShowHome",
+      "week": 3,
+      "player": "Jalen Coker",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team": "Team ShowHome",
+      "week": 3,
+      "player": "Eagles D/ST",
+      "slot": "D/ST",
+      "points": -1.0
+    },
+    {
+      "team": "Robs Team",
+      "week": 3,
+      "player": "De'Von Achane",
+      "slot": "RB",
+      "points": 1.0
+    },
+    {
+      "team": "Robs Team",
+      "week": 3,
+      "player": "Isaiah Likely",
+      "slot": "TE",
+      "points": 1.0
+    },
+    {
+      "team": "Gruck Around and Find Out",
+      "week": 3,
+      "player": "Dalton Kincaid",
+      "slot": "TE",
+      "points": 1.0
+    },
+    {
+      "team": "Team ThunderCats",
+      "week": 3,
+      "player": "Rhamondre Stevenson",
+      "slot": "RB",
+      "points": 3.0
+    },
+    {
+      "team": "Team ThunderCats",
+      "week": 3,
+      "player": "Kaelon Black",
+      "slot": "RB",
+      "points": 1.0
+    },
+    {
+      "team": "Team Smelliot",
+      "week": 3,
+      "player": "Xavier Worthy",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team": "Fantasy Football Team",
+      "week": 3,
+      "player": "Justin Jefferson",
+      "slot": "WR",
+      "points": 3.0
+    },
+    {
+      "team": "Fantasy Football Team",
+      "week": 3,
+      "player": "Colston Loveland",
+      "slot": "TE",
+      "points": 3.0
+    },
+    {
+      "team": "Fantasy Football Team",
+      "week": 3,
+      "player": "Blake Corum",
+      "slot": "RB/WR/TE",
+      "points": 1.0
+    },
+    {
+      "team": "Booty  Goon Squad",
+      "week": 3,
+      "player": "TreVeyon Henderson",
+      "slot": "RB/WR/TE",
+      "points": 2.0
+    },
+    {
+      "team": "Sam -Bo- Jangles",
+      "week": 3,
+      "player": "Tetairoa McMillan",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team": "Sam -Bo- Jangles",
+      "week": 3,
+      "player": "Dalton Schultz",
+      "slot": "TE",
+      "points": 3.0
     }
   ]
 }
