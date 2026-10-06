@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-02T13:19:41.833464+00:00",
+  "generated_at": "2026-10-06T13:14:46.595968+00:00",
   "league_id": 1515310,
   "year": 2026,
-  "current_week": 4,
+  "current_week": 5,
   "teams": [
     {
       "name": "Fantasy Football Team",
@@ -50,7 +50,7 @@
     },
     {
       "name": "Team ThunderCats",
-      "logo": "https://images.all-free-download.com/images/graphiclarge/thundercats_72985.jpg"
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/b3b861c0-c009-11f1-a12f-2b44c2a1875d"
     }
   ],
   "entries": [
@@ -158,6 +158,55 @@
       "week": 3,
       "player": "Bengals D/ST",
       "slot": "D/ST"
+    },
+    {
+      "id": "7_4_5083315_TE",
+      "team": "Team Autopilot",
+      "week": 4,
+      "player": "Kenyon Sadiq",
+      "slot": "TE"
+    },
+    {
+      "id": "8_4_4385690_TE",
+      "team": "Gruck Around and Find Out",
+      "week": 4,
+      "player": "Dalton Kincaid",
+      "slot": "TE"
+    },
+    {
+      "id": "6_4_3121422_WR",
+      "team": "Team Smelliot",
+      "week": 4,
+      "player": "Terry McLaurin",
+      "slot": "WR"
+    },
+    {
+      "id": "12_4_3929630_RB",
+      "team": "Team ShowHome",
+      "week": 4,
+      "player": "Saquon Barkley",
+      "slot": "RB"
+    },
+    {
+      "id": "4_4_4428331_WR",
+      "team": "Booty  Goon Squad",
+      "week": 4,
+      "player": "Rashee Rice",
+      "slot": "WR"
+    },
+    {
+      "id": "2_4_4432620_WR",
+      "team": "Robs Team",
+      "week": 4,
+      "player": "Parker Washington",
+      "slot": "WR"
+    },
+    {
+      "id": "9_4_3117256_TE",
+      "team": "Maye-be in Trouble",
+      "week": 4,
+      "player": "Dalton Schultz",
+      "slot": "TE"
     }
   ],
   "close_calls": [
@@ -543,6 +592,97 @@
       "team": "Maye-be in Trouble",
       "week": 3,
       "player": "Dalton Schultz",
+      "slot": "TE",
+      "points": 3.0
+    },
+    {
+      "team": "Dumpster Fire",
+      "week": 4,
+      "player": "Bills D/ST",
+      "slot": "D/ST",
+      "points": 1.0
+    },
+    {
+      "team": "Team Thunderpants",
+      "week": 4,
+      "player": "Travis Kelce",
+      "slot": "TE",
+      "points": 1.0
+    },
+    {
+      "team": "Team ShowHome",
+      "week": 4,
+      "player": "Davante Adams",
+      "slot": "WR",
+      "points": 3.0
+    },
+    {
+      "team": "Team ShowHome",
+      "week": 4,
+      "player": "Eagles D/ST",
+      "slot": "D/ST",
+      "points": 2.0
+    },
+    {
+      "team": "Team ShowHome",
+      "week": 4,
+      "player": "Chase McLaughlin",
+      "slot": "K",
+      "points": 2.0
+    },
+    {
+      "team": "Booty  Goon Squad",
+      "week": 4,
+      "player": "Garrett Wilson",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team": "Booty  Goon Squad",
+      "week": 4,
+      "player": "Texans D/ST",
+      "slot": "D/ST",
+      "points": 3.0
+    },
+    {
+      "team": "Robs Team",
+      "week": 4,
+      "player": "Chris Boswell",
+      "slot": "K",
+      "points": 3.0
+    },
+    {
+      "team": "Team ThunderCats",
+      "week": 4,
+      "player": "Ja'Marr Chase",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team": "Team ThunderCats",
+      "week": 4,
+      "player": "Trey McBride",
+      "slot": "TE",
+      "points": 3.0
+    },
+    {
+      "team": "Grit City Bridge Builders",
+      "week": 4,
+      "player": "DJ Moore",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team": "Fantasy Football Team",
+      "week": 4,
+      "player": "David Montgomery",
+      "slot": "RB",
+      "points": 3.0
+    },
+    {
+      "team": "Fantasy Football Team",
+      "week": 4,
+      "player": "Darren Waller",
       "slot": "TE",
       "points": 3.0
     }
