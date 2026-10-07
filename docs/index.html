@@ -455,7 +455,7 @@ function render() {
   const meta = document.getElementById('metaLine');
   if (seasonData.generated_at) {
     const dt = new Date(seasonData.generated_at);
-    meta.textContent = `Through week ${seasonData.current_week != null ? seasonData.current_week - 1 : '—'} · updated ${dt.toLocaleString()}`;
+        meta.textContent = `Week ${seasonData.current_week != null ? seasonData.current_week : '—'}, finished games only · updated ${dt.toLocaleString()}`;
   } else {
     meta.textContent = 'Waiting on the first automated pull from ESPN.';
   }
