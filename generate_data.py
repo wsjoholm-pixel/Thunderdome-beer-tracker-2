@@ -1,6 +1,6 @@
 """
 Generates docs/data.json: the full season's history of zero-point starters
-(plus near-misses and team logos), recomputed fresh from ESPN on every run.
+(plus near-misses, team logos and owners), recomputed fresh from ESPN on every run.
 """
 
 import os
@@ -31,7 +31,28 @@ def get_league() -> League:
     return League(**kwargs)
 
 
+def owner_info(team):
+    """Return (display names, ESPN usernames) for a team's owners.
+    Display name is "First Last" when ESPN has it, else the username."""
+    names, usernames = [], []
+    for owner in getattr(team, "owners", None) or []:
+        if not isinstance(owner, dict):
+            continue
+        full = " ".join(
+            p.strip() for p in (owner.get("firstName"), owner.get("lastName")) if p and p.strip()
+        )
+        username = (owner.get("displayName") or "").strip()
+        if full or username:
+            names.append(full or username)
+        if username:
+            usernames.append(username)
+    return names, usernames
+
+
 def collect_entries(league: League):
+    """Recompute every completed week from scratch. Idempotent by design --
+    each run fully replaces data.json rather than appending, so there's no
+    risk of duplicate or stale entries. Returns (zeros, close_calls)."""
     zeros = []
     close_calls = []
     last_completed_week = max(league.current_week - 1, 0)
@@ -62,6 +83,7 @@ def collect_entries(league: League):
                         entry_id = f"{team.team_id}_{week}_{getattr(player, 'playerId', player.name)}_{player.slot_position}"
                         zeros.append({
                             "id": entry_id,
+                            "team_id": team.team_id,
                             "team": team.team_name,
                             "week": week,
                             "player": player.name,
@@ -69,6 +91,7 @@ def collect_entries(league: League):
                         })
                     elif player.points != 0 and abs(player.points) <= CLOSE_CALL_RANGE:
                         close_calls.append({
+                            "team_id": team.team_id,
                             "team": team.team_name,
                             "week": week,
                             "player": player.name,
@@ -80,10 +103,16 @@ def collect_entries(league: League):
 
 def main():
     league = get_league()
-    teams = [
-        {"name": t.team_name, "logo": getattr(t, "logo_url", None) or None}
-        for t in league.teams
-    ]
+    teams = []
+    for t in league.teams:
+        names, usernames = owner_info(t)
+        teams.append({
+            "id": t.team_id,
+            "name": t.team_name,
+            "logo": getattr(t, "logo_url", None) or None,
+            "owners": names,
+            "owner_usernames": usernames,
+        })
     entries, close_calls = collect_entries(league)
 
     data = {
