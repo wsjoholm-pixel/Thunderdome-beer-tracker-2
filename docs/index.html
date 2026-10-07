@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Thunderdome</title>
+<title>Zero Point Tally</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍺</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -143,6 +143,14 @@
     min-width: 0;
   }
 
+  .team-owner {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 400;
+    color: var(--sage);
+    margin-top: 1px;
+  }
+
   .team-stats {
     display: flex;
     align-items: baseline;
@@ -226,6 +234,14 @@
     text-align: center;
     border-top: 1px solid var(--line);
   }
+
+  .owner-note {
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--sage);
+    margin: 14px 0 0;
+  }
+  .owner-note.warn { color: var(--rust); }
 
   .footer-note {
     font-size: 12px;
@@ -322,6 +338,7 @@
   </div>
 
   <div class="standings" id="standings"></div>
+  <p class="owner-note" id="ownerNote"></p>
 
   <div class="section-head">
     <h2>😬 Close calls</h2>
@@ -347,14 +364,15 @@ const firebaseConfig = {
   appId: "1:663202698627:web:3659e3d4ad6ec6cc3412b6"
 };
 
-const INCLUDED_TEAMS = [
-  "Fantasy Football Team",
-  "Maye-be in Trouble",
-  "Team Autopilot",
-  "Grit City Bridge Builders",
-  "Booty  Goon Squad",
-  "Robs Team"
-];
+// ---------------------------------------------------------------------------
+// WHO TO SHOW: list the owners (not team names) to include on the site.
+// Use each person's name as ESPN has it ("First Last") or their ESPN username.
+// Capitalization and extra spaces don't matter. Team names come from ESPN
+// automatically, so a team renaming itself never breaks anything.
+// Example:  const INCLUDED_OWNERS = ["Sam Smith", "Rob Jones"];
+// Leave the list empty to show every team in the league.
+// ---------------------------------------------------------------------------
+const INCLUDED_OWNERS = [];
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -362,8 +380,8 @@ const paidCollection = collection(db, "paid");
 
 let seasonData = { teams: [], entries: [], close_calls: [], generated_at: null, current_week: null };
 let paidMap = {};
-let openTeam = null;
-let openCloseCallTeam = null;
+let openTeam = null;          // team id
+let openCloseCallTeam = null; // team id
 let firestoreReady = false;
 
 function escapeHtml(str) {
@@ -372,20 +390,39 @@ function escapeHtml(str) {
   return d.innerHTML;
 }
 
-function teamName(t) {
-  return typeof t === 'string' ? t : t.name;
+// Lowercase, trim, and collapse repeated spaces so "Sam  Smith" matches "sam smith".
+function norm(s) {
+  return String(s || '').toLowerCase().replace(/\s+/g, ' ').trim();
 }
 
-function teamLogo(t) {
-  return typeof t === 'string' ? null : t.logo;
+const ownerSet = new Set(INCLUDED_OWNERS.map(norm));
+
+function ownerNames(t) {
+  return [...(t.owners || []), ...(t.owner_usernames || [])];
 }
 
-function isIncluded(name) {
-  return INCLUDED_TEAMS.includes(name);
+function ownerLabel(t) {
+  return (t.owners && t.owners.length) ? t.owners.join(' & ') : '';
+}
+
+function isIncludedTeam(t) {
+  if (ownerSet.size === 0) return true;
+  return ownerNames(t).some(n => ownerSet.has(norm(n)));
+}
+
+function includedTeams() {
+  return seasonData.teams.filter(isIncludedTeam);
+}
+
+// True once data.json has the newer format (team ids + owners).
+function dataIsCurrent() {
+  return seasonData.teams.length > 0
+    && seasonData.teams.every(t => t && typeof t === 'object' && t.id !== undefined)
+    && seasonData.entries.every(e => e.team_id !== undefined);
 }
 
 function initials(name) {
-  return name.split(/\s+/).map(w => w[0]).slice(0, 2).join('').toUpperCase();
+  return name.split(/\s+/).filter(Boolean).map(w => w[0]).slice(0, 2).join('').toUpperCase();
 }
 
 function setSyncBadge(text, isError) {
@@ -394,8 +431,8 @@ function setSyncBadge(text, isError) {
   el.className = 'sync-badge' + (isError ? ' error' : '');
 }
 
-function teamTotals(name) {
-  const teamEntries = seasonData.entries.filter(e => e.team === name);
+function teamTotals(teamId) {
+  const teamEntries = seasonData.entries.filter(e => e.team_id === teamId);
   const owedNotPaid = teamEntries.filter(e => !paidMap[e.id]).length;
   return { owed: owedNotPaid, total: teamEntries.length };
 }
@@ -408,11 +445,12 @@ function logoHtmlFor(name, logo, sizeClass) {
 }
 
 function render() {
-  const includedEntries = seasonData.entries.filter(e => isIncluded(e.team));
+  const current = dataIsCurrent();
+  const ids = new Set(includedTeams().map(t => t.id));
+  const includedEntries = current ? seasonData.entries.filter(e => ids.has(e.team_id)) : [];
   const totalOwed = includedEntries.filter(e => !paidMap[e.id]).length;
-  const totalSeason = includedEntries.length;
   document.getElementById('heroNumber').childNodes[0].textContent = totalOwed + ' ';
-  document.getElementById('heroTotalNumber').childNodes[0].textContent = totalSeason + ' ';
+  document.getElementById('heroTotalNumber').childNodes[0].textContent = includedEntries.length + ' ';
 
   const meta = document.getElementById('metaLine');
   if (seasonData.generated_at) {
@@ -422,35 +460,66 @@ function render() {
     meta.textContent = 'Waiting on the first automated pull from ESPN.';
   }
 
-  renderStandings();
-  renderCloseCalls();
+  renderStandings(current);
+  renderOwnerNote(current);
+  renderCloseCalls(current);
 }
 
-function renderStandings() {
+// Explains who's shown, and calls out any configured owner that didn't match
+// anyone (instead of silently dropping them).
+function renderOwnerNote(current) {
+  const el = document.getElementById('ownerNote');
+  el.className = 'owner-note';
+  el.textContent = '';
+  if (!current) return;
+
+  const everyone = seasonData.teams.map(t => {
+    const label = ownerLabel(t) || '(no owner listed)';
+    const extra = (t.owner_usernames || []).filter(u => norm(u) !== norm(label));
+    return extra.length ? `${label} (${extra.join(', ')})` : label;
+  }).join(' · ');
+
+  const known = new Set(seasonData.teams.flatMap(ownerNames).map(norm));
+  const missing = INCLUDED_OWNERS.filter(n => !known.has(norm(n)));
+
+  if (missing.length) {
+    el.className = 'owner-note warn';
+    el.textContent = `Couldn't find an owner named: ${missing.join(', ')}. Owners in this league: ${everyone}`;
+  } else if (ownerSet.size === 0) {
+    el.textContent = `Showing every team. To limit the list, add owner names to INCLUDED_OWNERS in index.html. Owners in this league: ${everyone}`;
+  }
+}
+
+function renderStandings(current) {
   const container = document.getElementById('standings');
   container.innerHTML = '';
 
-  const includedTeams = seasonData.teams.filter(t => isIncluded(teamName(t)));
-
-  if (includedTeams.length === 0) {
-    container.innerHTML = `<div class="empty-state">No matching teams found yet — check that the team names in the page match ESPN exactly.</div>`;
+  if (!current) {
+    container.innerHTML = `<div class="empty-state">Waiting on a fresh ESPN pull to load owner info — run the "Update Zero Point Data" workflow once.</div>`;
     return;
   }
 
-  const ranked = includedTeams
-    .map(t => ({ name: teamName(t), logo: teamLogo(t), ...teamTotals(teamName(t)) }))
+  const teams = includedTeams();
+  if (teams.length === 0) {
+    container.innerHTML = `<div class="empty-state">No teams matched the owners in INCLUDED_OWNERS.</div>`;
+    return;
+  }
+
+  const ranked = teams
+    .map(t => ({ ...t, ...teamTotals(t.id) }))
     .sort((a, b) => b.total - a.total || a.name.localeCompare(b.name));
 
   ranked.forEach((team, i) => {
     const row = document.createElement('div');
     row.className = 'standing-row';
     const owedClass = team.owed === 0 ? 'zero' : (team.owed >= 4 ? 'high' : '');
-    const isOpen = openTeam === team.name;
+    const isOpen = openTeam === team.id;
+    const owner = ownerLabel(team);
 
     row.innerHTML = `
       <div class="rank">${i + 1}</div>
       ${logoHtmlFor(team.name, team.logo, 'team-logo')}
-      <div class="team-name">${escapeHtml(team.name)}</div>
+      <div class="team-name">${escapeHtml(team.name)}${owner ? `<span class="team-owner">${escapeHtml(owner)}</span>` : ''}</div>
       <div class="team-stats">
         <div class="stat-col">
           <span class="stat-value ${owedClass}">${team.owed}</span>
@@ -464,7 +533,7 @@ function renderStandings() {
       <div class="chevron ${isOpen ? 'open' : ''}">▸</div>
     `;
     row.addEventListener('click', () => {
-      openTeam = isOpen ? null : team.name;
+      openTeam = isOpen ? null : team.id;
       render();
     });
     container.appendChild(row);
@@ -472,7 +541,7 @@ function renderStandings() {
     const logWrap = document.createElement('div');
     logWrap.className = 'log-list' + (isOpen ? ' open' : '');
     const teamEntries = seasonData.entries
-      .filter(e => e.team === team.name)
+      .filter(e => e.team_id === team.id)
       .sort((a, b) => b.week - a.week);
 
     if (teamEntries.length === 0) {
@@ -515,11 +584,13 @@ function renderStandings() {
   });
 }
 
-function renderCloseCalls() {
+function renderCloseCalls(current) {
   const container = document.getElementById('closeCalls');
   container.innerHTML = '';
+  if (!current) return;
 
-  const closeCalls = (seasonData.close_calls || []).filter(cc => isIncluded(cc.team));
+  const ids = new Set(includedTeams().map(t => t.id));
+  const closeCalls = (seasonData.close_calls || []).filter(cc => ids.has(cc.team_id));
   if (closeCalls.length === 0) {
     container.innerHTML = `<div class="empty-state">No close calls yet this season.</div>`;
     return;
@@ -527,43 +598,45 @@ function renderCloseCalls() {
 
   const byTeam = {};
   closeCalls.forEach(cc => {
-    if (!byTeam[cc.team]) byTeam[cc.team] = [];
-    byTeam[cc.team].push(cc);
+    if (!byTeam[cc.team_id]) byTeam[cc.team_id] = [];
+    byTeam[cc.team_id].push(cc);
   });
 
   const teamMeta = {};
-  seasonData.teams.forEach(t => { teamMeta[teamName(t)] = teamLogo(t); });
+  seasonData.teams.forEach(t => { teamMeta[t.id] = t; });
 
-  const teamOrder = Object.keys(byTeam).sort((a, b) => byTeam[b].length - byTeam[a].length || a.localeCompare(b));
+  const teamOrder = Object.keys(byTeam).map(Number).sort((a, b) =>
+    byTeam[b].length - byTeam[a].length || teamMeta[a].name.localeCompare(teamMeta[b].name));
 
-  teamOrder.forEach(name => {
+  teamOrder.forEach(id => {
+    const team = teamMeta[id];
     const group = document.createElement('div');
     group.className = 'cc-team-group';
-    const isOpen = openCloseCallTeam === name;
+    const isOpen = openCloseCallTeam === id;
 
     const header = document.createElement('div');
     header.className = 'cc-team-header';
     header.innerHTML = `
-      ${logoHtmlFor(name, teamMeta[name], 'team-logo')}
-      <span class="cc-team-header-name">${escapeHtml(name)}</span>
-      <span class="cc-count-badge">${byTeam[name].length}</span>
+      ${logoHtmlFor(team.name, team.logo, 'team-logo')}
+      <span class="cc-team-header-name">${escapeHtml(team.name)}</span>
+      <span class="cc-count-badge">${byTeam[id].length}</span>
       <div class="chevron ${isOpen ? 'open' : ''}">▸</div>
     `;
     header.addEventListener('click', () => {
-      openCloseCallTeam = isOpen ? null : name;
-      renderCloseCalls();
+      openCloseCallTeam = isOpen ? null : id;
+      renderCloseCalls(true);
     });
     group.appendChild(header);
 
     const logWrap = document.createElement('div');
     logWrap.className = 'cc-log-list' + (isOpen ? ' open' : '');
 
-    const sorted = [...byTeam[name]].sort((a, b) => a.points - b.points || b.week - a.week);
+    const sorted = [...byTeam[id]].sort((a, b) => a.points - b.points || b.week - a.week);
     sorted.forEach(cc => {
       const row = document.createElement('div');
       row.className = 'close-call-row';
       row.innerHTML = `
-                <div class="close-call-points">${cc.points}<span style="font-size:11px; color:var(--sage); font-family:'Work Sans',sans-serif;"> pts</span></div>
+        <div class="close-call-points">${cc.points}<span style="font-size:11px; color:var(--sage); font-family:'Work Sans',sans-serif;"> pts</span></div>
         <div class="close-call-desc">
           ${escapeHtml(cc.player)}${cc.slot ? ' (' + escapeHtml(cc.slot) + ')' : ''}
           <span class="close-call-week"> · Wk ${cc.week}</span>
