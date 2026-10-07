@@ -1,61 +1,146 @@
 {
-  "generated_at": "2026-10-06T13:14:46.595968+00:00",
+  "generated_at": "2026-10-07T17:53:27.744817+00:00",
   "league_id": 1515310,
   "year": 2026,
   "current_week": 5,
   "teams": [
     {
+      "id": 1,
       "name": "Fantasy Football Team",
-      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/BoneHeads-ToddDetwiler/BoneHeads-06.svg"
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/BoneHeads-ToddDetwiler/BoneHeads-06.svg",
+      "owners": [
+        "Wes Sjoholm"
+      ],
+      "owner_usernames": [
+        "wsjoholm"
+      ]
     },
     {
+      "id": 2,
       "name": "Robs Team",
-      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-08.svg"
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/TeamKinny-MartinLaksman/TeamKinny-08.svg",
+      "owners": [
+        "Rob Semanchik"
+      ],
+      "owner_usernames": [
+        "rsemanchik"
+      ]
     },
     {
+      "id": 3,
       "name": "Grit City Bridge Builders",
-      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/68731340-7244-11f0-89a4-9ba80f933b95"
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/68731340-7244-11f0-89a4-9ba80f933b95",
+      "owners": [
+        "Andrew Lowe"
+      ],
+      "owner_usernames": [
+        "sweet heat 6"
+      ]
     },
     {
+      "id": 4,
       "name": "Booty  Goon Squad",
-      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/MickeyAndDonald-Disney/Disney-06.svg"
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/MickeyAndDonald-Disney/Disney-06.svg",
+      "owners": [
+        "travis addante"
+      ],
+      "owner_usernames": [
+        "coldchillinsince90"
+      ]
     },
     {
+      "id": 6,
       "name": "Team Smelliot",
-      "logo": "https://g.espncdn.com/lm-static/logo-packs/core/ESPN_Avengers_Pack/10-ESPN_AVG_Rocket-01.svg"
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/core/ESPN_Avengers_Pack/10-ESPN_AVG_Rocket-01.svg",
+      "owners": [
+        "Elliot Hullverson"
+      ],
+      "owner_usernames": [
+        "Elliot7156"
+      ]
     },
     {
+      "id": 7,
       "name": "Team Autopilot",
-      "logo": "https://g.espncdn.com/lm-static/logo-packs/core/StarWarsTheRiseOfSkywalker/rise-skywalker-c3po.svg"
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/core/StarWarsTheRiseOfSkywalker/rise-skywalker-c3po.svg",
+      "owners": [
+        "Joshua Phillips"
+      ],
+      "owner_usernames": [
+        "slyjosh"
+      ]
     },
     {
+      "id": 8,
       "name": "Gruck Around and Find Out",
-      "logo": "https://g.espncdn.com/lm-static/logo-packs/core/StarWarsTheRiseOfSkywalker/rise-skywalker-zorri.svg"
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/core/StarWarsTheRiseOfSkywalker/rise-skywalker-zorri.svg",
+      "owners": [
+        "AJ Grucky"
+      ],
+      "owner_usernames": [
+        "agrucky"
+      ]
     },
     {
+      "id": 9,
       "name": "Maye-be in Trouble",
-      "logo": "https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_05a.svg"
+      "logo": "https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_05a.svg",
+      "owners": [
+        "sam grucky"
+      ],
+      "owner_usernames": [
+        "sgrucky"
+      ]
     },
     {
+      "id": 10,
       "name": "Team Thunderpants",
-      "logo": "https://g.espncdn.com/s/ffllm/logos/GridironWarriors-MartinLaksman/warriors-17.svg"
+      "logo": "https://g.espncdn.com/s/ffllm/logos/GridironWarriors-MartinLaksman/warriors-17.svg",
+      "owners": [
+        "Clay Solomon"
+      ],
+      "owner_usernames": [
+        "ESPNfan4610348821"
+      ]
     },
     {
+      "id": 11,
       "name": "Dumpster Fire",
-      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/8bitHeros-JoeyEllis/8bit_football-06.svg"
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/8bitHeros-JoeyEllis/8bit_football-06.svg",
+      "owners": [
+        "alexander bentley"
+      ],
+      "owner_usernames": [
+        "bentleythe3rd"
+      ]
     },
     {
+      "id": 12,
       "name": "Team ShowHome",
-      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_10.svg"
+      "logo": "https://g.espncdn.com/lm-static/logo-packs/ffl/AtTheStadium-RobbHarskamp/At_The_Stadium_10.svg",
+      "owners": [
+        "Lance Sjoholm"
+      ],
+      "owner_usernames": [
+        "LanceSjoholm"
+      ]
     },
     {
+      "id": 13,
       "name": "Team ThunderCats",
-      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/b3b861c0-c009-11f1-a12f-2b44c2a1875d"
+      "logo": "https://mystique-api.fantasy.espn.com/apis/v1/domains/lm/images/b3b861c0-c009-11f1-a12f-2b44c2a1875d",
+      "owners": [
+        "Elaine Hullverson"
+      ],
+      "owner_usernames": [
+        "Elaineh7xaa3_"
+      ]
     }
   ],
   "entries": [
     {
       "id": "1_1_4723086_TE",
+      "team_id": 1,
       "team": "Fantasy Football Team",
       "week": 1,
       "player": "Colston Loveland",
@@ -63,6 +148,7 @@
     },
     {
       "id": "10_1_-16024_D/ST",
+      "team_id": 10,
       "team": "Team Thunderpants",
       "week": 1,
       "player": "Chargers D/ST",
@@ -70,6 +156,7 @@
     },
     {
       "id": "7_1_4372016_RB/WR/TE",
+      "team_id": 7,
       "team": "Team Autopilot",
       "week": 1,
       "player": "Jaylen Waddle",
@@ -77,6 +164,7 @@
     },
     {
       "id": "7_1_4360248_TE",
+      "team_id": 7,
       "team": "Team Autopilot",
       "week": 1,
       "player": "Kyle Pitts Sr.",
@@ -84,6 +172,7 @@
     },
     {
       "id": "1_2_4426515_RB/WR/TE",
+      "team_id": 1,
       "team": "Fantasy Football Team",
       "week": 2,
       "player": "Puka Nacua",
@@ -91,6 +180,7 @@
     },
     {
       "id": "1_2_4723086_TE",
+      "team_id": 1,
       "team": "Fantasy Football Team",
       "week": 2,
       "player": "Colston Loveland",
@@ -98,6 +188,7 @@
     },
     {
       "id": "3_2_3915416_WR",
+      "team_id": 3,
       "team": "Grit City Bridge Builders",
       "week": 2,
       "player": "DJ Moore",
@@ -105,6 +196,7 @@
     },
     {
       "id": "9_2_4595348_WR",
+      "team_id": 9,
       "team": "Maye-be in Trouble",
       "week": 2,
       "player": "Malik Nabers",
@@ -112,6 +204,7 @@
     },
     {
       "id": "9_2_3121023_TE",
+      "team_id": 9,
       "team": "Maye-be in Trouble",
       "week": 2,
       "player": "Dallas Goedert",
@@ -119,6 +212,7 @@
     },
     {
       "id": "11_3_4432773_RB/WR/TE",
+      "team_id": 11,
       "team": "Dumpster Fire",
       "week": 3,
       "player": "Brian Thomas Jr.",
@@ -126,6 +220,7 @@
     },
     {
       "id": "12_3_3046439_TE",
+      "team_id": 12,
       "team": "Team ShowHome",
       "week": 3,
       "player": "Hunter Henry",
@@ -133,6 +228,7 @@
     },
     {
       "id": "7_3_4360248_TE",
+      "team_id": 7,
       "team": "Team Autopilot",
       "week": 3,
       "player": "Kyle Pitts Sr.",
@@ -140,6 +236,7 @@
     },
     {
       "id": "8_3_4242433_RB/WR/TE",
+      "team_id": 8,
       "team": "Gruck Around and Find Out",
       "week": 3,
       "player": "Joshua Palmer",
@@ -147,6 +244,7 @@
     },
     {
       "id": "13_3_-16025_D/ST",
+      "team_id": 13,
       "team": "Team ThunderCats",
       "week": 3,
       "player": "49ers D/ST",
@@ -154,6 +252,7 @@
     },
     {
       "id": "1_3_-16004_D/ST",
+      "team_id": 1,
       "team": "Fantasy Football Team",
       "week": 3,
       "player": "Bengals D/ST",
@@ -161,6 +260,7 @@
     },
     {
       "id": "7_4_5083315_TE",
+      "team_id": 7,
       "team": "Team Autopilot",
       "week": 4,
       "player": "Kenyon Sadiq",
@@ -168,6 +268,7 @@
     },
     {
       "id": "8_4_4385690_TE",
+      "team_id": 8,
       "team": "Gruck Around and Find Out",
       "week": 4,
       "player": "Dalton Kincaid",
@@ -175,6 +276,7 @@
     },
     {
       "id": "6_4_3121422_WR",
+      "team_id": 6,
       "team": "Team Smelliot",
       "week": 4,
       "player": "Terry McLaurin",
@@ -182,6 +284,7 @@
     },
     {
       "id": "12_4_3929630_RB",
+      "team_id": 12,
       "team": "Team ShowHome",
       "week": 4,
       "player": "Saquon Barkley",
@@ -189,6 +292,7 @@
     },
     {
       "id": "4_4_4428331_WR",
+      "team_id": 4,
       "team": "Booty  Goon Squad",
       "week": 4,
       "player": "Rashee Rice",
@@ -196,6 +300,7 @@
     },
     {
       "id": "2_4_4432620_WR",
+      "team_id": 2,
       "team": "Robs Team",
       "week": 4,
       "player": "Parker Washington",
@@ -203,6 +308,7 @@
     },
     {
       "id": "9_4_3117256_TE",
+      "team_id": 9,
       "team": "Maye-be in Trouble",
       "week": 4,
       "player": "Dalton Schultz",
@@ -211,6 +317,7 @@
   ],
   "close_calls": [
     {
+      "team_id": 2,
       "team": "Robs Team",
       "week": 1,
       "player": "George Pickens",
@@ -218,6 +325,7 @@
       "points": 2.0
     },
     {
+      "team_id": 2,
       "team": "Robs Team",
       "week": 1,
       "player": "MarShawn Lloyd",
@@ -225,6 +333,7 @@
       "points": 3.0
     },
     {
+      "team_id": 11,
       "team": "Dumpster Fire",
       "week": 1,
       "player": "Harold Fannin Jr.",
@@ -232,6 +341,7 @@
       "points": 2.0
     },
     {
+      "team_id": 11,
       "team": "Dumpster Fire",
       "week": 1,
       "player": "Titans D/ST",
@@ -239,6 +349,7 @@
       "points": -1.0
     },
     {
+      "team_id": 13,
       "team": "Team ThunderCats",
       "week": 1,
       "player": "Ja'Marr Chase",
@@ -246,6 +357,7 @@
       "points": 1.0
     },
     {
+      "team_id": 13,
       "team": "Team ThunderCats",
       "week": 1,
       "player": "Drake London",
@@ -253,6 +365,7 @@
       "points": 2.0
     },
     {
+      "team_id": 13,
       "team": "Team ThunderCats",
       "week": 1,
       "player": "Browns D/ST",
@@ -260,6 +373,7 @@
       "points": -1.0
     },
     {
+      "team_id": 12,
       "team": "Team ShowHome",
       "week": 1,
       "player": "Davante Adams",
@@ -267,6 +381,7 @@
       "points": 2.0
     },
     {
+      "team_id": 12,
       "team": "Team ShowHome",
       "week": 1,
       "player": "Hunter Henry",
@@ -274,6 +389,7 @@
       "points": 2.0
     },
     {
+      "team_id": 10,
       "team": "Team Thunderpants",
       "week": 1,
       "player": "Courtland Sutton",
@@ -281,6 +397,7 @@
       "points": 1.0
     },
     {
+      "team_id": 3,
       "team": "Grit City Bridge Builders",
       "week": 1,
       "player": "J.K. Dobbins",
@@ -288,6 +405,7 @@
       "points": 3.0
     },
     {
+      "team_id": 3,
       "team": "Grit City Bridge Builders",
       "week": 1,
       "player": "Rams D/ST",
@@ -295,6 +413,7 @@
       "points": 1.0
     },
     {
+      "team_id": 7,
       "team": "Team Autopilot",
       "week": 1,
       "player": "Harrison Mevis",
@@ -302,6 +421,7 @@
       "points": 1.0
     },
     {
+      "team_id": 9,
       "team": "Maye-be in Trouble",
       "week": 1,
       "player": "Rico Dowdle",
@@ -309,6 +429,7 @@
       "points": 1.0
     },
     {
+      "team_id": 9,
       "team": "Maye-be in Trouble",
       "week": 1,
       "player": "Marvin Harrison Jr.",
@@ -316,6 +437,7 @@
       "points": 3.0
     },
     {
+      "team_id": 8,
       "team": "Gruck Around and Find Out",
       "week": 1,
       "player": "Broncos D/ST",
@@ -323,6 +445,7 @@
       "points": 2.0
     },
     {
+      "team_id": 4,
       "team": "Booty  Goon Squad",
       "week": 1,
       "player": "George Kittle",
@@ -330,6 +453,7 @@
       "points": 1.0
     },
     {
+      "team_id": 4,
       "team": "Booty  Goon Squad",
       "week": 1,
       "player": "Cameron Dicker",
@@ -337,6 +461,7 @@
       "points": 2.0
     },
     {
+      "team_id": 6,
       "team": "Team Smelliot",
       "week": 1,
       "player": "A.J. Brown",
@@ -344,6 +469,7 @@
       "points": 2.0
     },
     {
+      "team_id": 6,
       "team": "Team Smelliot",
       "week": 1,
       "player": "Terry McLaurin",
@@ -351,6 +477,7 @@
       "points": 1.0
     },
     {
+      "team_id": 6,
       "team": "Team Smelliot",
       "week": 1,
       "player": "Tony Pollard",
@@ -358,6 +485,7 @@
       "points": 3.0
     },
     {
+      "team_id": 6,
       "team": "Team Smelliot",
       "week": 1,
       "player": "Brandon Aubrey",
@@ -365,6 +493,7 @@
       "points": 2.0
     },
     {
+      "team_id": 11,
       "team": "Dumpster Fire",
       "week": 2,
       "player": "Tyler Allgeier",
@@ -372,6 +501,7 @@
       "points": 1.0
     },
     {
+      "team_id": 11,
       "team": "Dumpster Fire",
       "week": 2,
       "player": "Chiefs D/ST",
@@ -379,6 +509,7 @@
       "points": 1.0
     },
     {
+      "team_id": 12,
       "team": "Team ShowHome",
       "week": 2,
       "player": "Saquon Barkley",
@@ -386,6 +517,7 @@
       "points": 1.0
     },
     {
+      "team_id": 12,
       "team": "Team ShowHome",
       "week": 2,
       "player": "Jadarian Price",
@@ -393,6 +525,7 @@
       "points": 3.0
     },
     {
+      "team_id": 10,
       "team": "Team Thunderpants",
       "week": 2,
       "player": "Courtland Sutton",
@@ -400,6 +533,7 @@
       "points": 2.0
     },
     {
+      "team_id": 2,
       "team": "Robs Team",
       "week": 2,
       "player": "Ladd McConkey",
@@ -407,6 +541,7 @@
       "points": 3.0
     },
     {
+      "team_id": 2,
       "team": "Robs Team",
       "week": 2,
       "player": "Isaiah Likely",
@@ -414,6 +549,7 @@
       "points": 3.0
     },
     {
+      "team_id": 7,
       "team": "Team Autopilot",
       "week": 2,
       "player": "Kyle Pitts Sr.",
@@ -421,6 +557,7 @@
       "points": 1.0
     },
     {
+      "team_id": 7,
       "team": "Team Autopilot",
       "week": 2,
       "player": "Harrison Mevis",
@@ -428,6 +565,7 @@
       "points": 3.0
     },
     {
+      "team_id": 13,
       "team": "Team ThunderCats",
       "week": 2,
       "player": "Rhamondre Stevenson",
@@ -435,6 +573,7 @@
       "points": 2.0
     },
     {
+      "team_id": 13,
       "team": "Team ThunderCats",
       "week": 2,
       "player": "Kaelon Black",
@@ -442,6 +581,7 @@
       "points": 2.0
     },
     {
+      "team_id": 8,
       "team": "Gruck Around and Find Out",
       "week": 2,
       "player": "DK Metcalf",
@@ -449,6 +589,7 @@
       "points": 2.0
     },
     {
+      "team_id": 8,
       "team": "Gruck Around and Find Out",
       "week": 2,
       "player": "Deebo Samuel Sr.",
@@ -456,6 +597,7 @@
       "points": 3.0
     },
     {
+      "team_id": 1,
       "team": "Fantasy Football Team",
       "week": 2,
       "player": "David Montgomery",
@@ -463,6 +605,7 @@
       "points": 2.0
     },
     {
+      "team_id": 6,
       "team": "Team Smelliot",
       "week": 2,
       "player": "Jeremiyah Love",
@@ -470,6 +613,7 @@
       "points": 3.0
     },
     {
+      "team_id": 3,
       "team": "Grit City Bridge Builders",
       "week": 2,
       "player": "J.K. Dobbins",
@@ -477,6 +621,7 @@
       "points": 3.0
     },
     {
+      "team_id": 3,
       "team": "Grit City Bridge Builders",
       "week": 2,
       "player": "Alec Pierce",
@@ -484,6 +629,7 @@
       "points": 1.0
     },
     {
+      "team_id": 4,
       "team": "Booty  Goon Squad",
       "week": 2,
       "player": "Cameron Dicker",
@@ -491,6 +637,7 @@
       "points": 1.0
     },
     {
+      "team_id": 12,
       "team": "Team ShowHome",
       "week": 3,
       "player": "Jadarian Price",
@@ -498,6 +645,7 @@
       "points": -1.0
     },
     {
+      "team_id": 12,
       "team": "Team ShowHome",
       "week": 3,
       "player": "Jalen Coker",
@@ -505,6 +653,7 @@
       "points": 1.0
     },
     {
+      "team_id": 12,
       "team": "Team ShowHome",
       "week": 3,
       "player": "Eagles D/ST",
@@ -512,6 +661,7 @@
       "points": -1.0
     },
     {
+      "team_id": 2,
       "team": "Robs Team",
       "week": 3,
       "player": "De'Von Achane",
@@ -519,6 +669,7 @@
       "points": 1.0
     },
     {
+      "team_id": 2,
       "team": "Robs Team",
       "week": 3,
       "player": "Isaiah Likely",
@@ -526,6 +677,7 @@
       "points": 1.0
     },
     {
+      "team_id": 8,
       "team": "Gruck Around and Find Out",
       "week": 3,
       "player": "Dalton Kincaid",
@@ -533,6 +685,7 @@
       "points": 1.0
     },
     {
+      "team_id": 13,
       "team": "Team ThunderCats",
       "week": 3,
       "player": "Rhamondre Stevenson",
@@ -540,6 +693,7 @@
       "points": 3.0
     },
     {
+      "team_id": 13,
       "team": "Team ThunderCats",
       "week": 3,
       "player": "Kaelon Black",
@@ -547,6 +701,7 @@
       "points": 1.0
     },
     {
+      "team_id": 6,
       "team": "Team Smelliot",
       "week": 3,
       "player": "Xavier Worthy",
@@ -554,6 +709,7 @@
       "points": 2.0
     },
     {
+      "team_id": 1,
       "team": "Fantasy Football Team",
       "week": 3,
       "player": "Justin Jefferson",
@@ -561,6 +717,7 @@
       "points": 3.0
     },
     {
+      "team_id": 1,
       "team": "Fantasy Football Team",
       "week": 3,
       "player": "Colston Loveland",
@@ -568,6 +725,7 @@
       "points": 3.0
     },
     {
+      "team_id": 1,
       "team": "Fantasy Football Team",
       "week": 3,
       "player": "Blake Corum",
@@ -575,6 +733,7 @@
       "points": 1.0
     },
     {
+      "team_id": 4,
       "team": "Booty  Goon Squad",
       "week": 3,
       "player": "TreVeyon Henderson",
@@ -582,6 +741,7 @@
       "points": 2.0
     },
     {
+      "team_id": 9,
       "team": "Maye-be in Trouble",
       "week": 3,
       "player": "Tetairoa McMillan",
@@ -589,6 +749,7 @@
       "points": 1.0
     },
     {
+      "team_id": 9,
       "team": "Maye-be in Trouble",
       "week": 3,
       "player": "Dalton Schultz",
@@ -596,6 +757,7 @@
       "points": 3.0
     },
     {
+      "team_id": 11,
       "team": "Dumpster Fire",
       "week": 4,
       "player": "Bills D/ST",
@@ -603,6 +765,7 @@
       "points": 1.0
     },
     {
+      "team_id": 10,
       "team": "Team Thunderpants",
       "week": 4,
       "player": "Travis Kelce",
@@ -610,6 +773,7 @@
       "points": 1.0
     },
     {
+      "team_id": 12,
       "team": "Team ShowHome",
       "week": 4,
       "player": "Davante Adams",
@@ -617,6 +781,7 @@
       "points": 3.0
     },
     {
+      "team_id": 12,
       "team": "Team ShowHome",
       "week": 4,
       "player": "Eagles D/ST",
@@ -624,6 +789,7 @@
       "points": 2.0
     },
     {
+      "team_id": 12,
       "team": "Team ShowHome",
       "week": 4,
       "player": "Chase McLaughlin",
@@ -631,6 +797,7 @@
       "points": 2.0
     },
     {
+      "team_id": 4,
       "team": "Booty  Goon Squad",
       "week": 4,
       "player": "Garrett Wilson",
@@ -638,6 +805,7 @@
       "points": 2.0
     },
     {
+      "team_id": 4,
       "team": "Booty  Goon Squad",
       "week": 4,
       "player": "Texans D/ST",
@@ -645,6 +813,7 @@
       "points": 3.0
     },
     {
+      "team_id": 2,
       "team": "Robs Team",
       "week": 4,
       "player": "Chris Boswell",
@@ -652,6 +821,7 @@
       "points": 3.0
     },
     {
+      "team_id": 13,
       "team": "Team ThunderCats",
       "week": 4,
       "player": "Ja'Marr Chase",
@@ -659,6 +829,7 @@
       "points": 2.0
     },
     {
+      "team_id": 13,
       "team": "Team ThunderCats",
       "week": 4,
       "player": "Trey McBride",
@@ -666,6 +837,7 @@
       "points": 3.0
     },
     {
+      "team_id": 3,
       "team": "Grit City Bridge Builders",
       "week": 4,
       "player": "DJ Moore",
@@ -673,6 +845,7 @@
       "points": 1.0
     },
     {
+      "team_id": 1,
       "team": "Fantasy Football Team",
       "week": 4,
       "player": "David Montgomery",
@@ -680,6 +853,7 @@
       "points": 3.0
     },
     {
+      "team_id": 1,
       "team": "Fantasy Football Team",
       "week": 4,
       "player": "Darren Waller",
