@@ -55,9 +55,9 @@ def collect_entries(league: League):
     risk of duplicate or stale entries. Returns (zeros, close_calls)."""
     zeros = []
     close_calls = []
-    last_completed_week = max(league.current_week - 1, 0)
+    last_week = min(league.current_week, 18)
 
-    for week in range(1, last_completed_week + 1):
+    for week in range(1, last_week + 1):
         try:
             box_scores = league.box_scores(week=week)
         except Exception as e:
