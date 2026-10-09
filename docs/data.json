@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T17:53:27.744817+00:00",
+  "generated_at": "2026-10-09T13:21:40.830894+00:00",
   "league_id": 1515310,
   "year": 2026,
   "current_week": 5,
@@ -313,6 +313,14 @@
       "week": 4,
       "player": "Dalton Schultz",
       "slot": "TE"
+    },
+    {
+      "id": "2_5_4241389_WR",
+      "team_id": 2,
+      "team": "Robs Team",
+      "week": 5,
+      "player": "CeeDee Lamb",
+      "slot": "WR"
     }
   ],
   "close_calls": [
@@ -859,6 +867,22 @@
       "player": "Darren Waller",
       "slot": "TE",
       "points": 3.0
+    },
+    {
+      "team_id": 10,
+      "team": "Team Thunderpants",
+      "week": 5,
+      "player": "Jake Ferguson",
+      "slot": "TE",
+      "points": 1.0
+    },
+    {
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 5,
+      "player": "Cowboys D/ST",
+      "slot": "D/ST",
+      "points": -2.0
     }
   ]
 }
