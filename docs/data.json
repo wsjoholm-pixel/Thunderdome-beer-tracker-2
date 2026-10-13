@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-09T13:21:40.830894+00:00",
+  "generated_at": "2026-10-13T14:31:02.797286+00:00",
   "league_id": 1515310,
   "year": 2026,
-  "current_week": 5,
+  "current_week": 6,
   "teams": [
     {
       "id": 1,
@@ -315,12 +315,188 @@
       "slot": "TE"
     },
     {
+      "id": "8_5_3126486_WR",
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 5,
+      "player": "Deebo Samuel Sr.",
+      "slot": "WR"
+    },
+    {
+      "id": "11_5_5083076_TE",
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 5,
+      "player": "Harold Fannin Jr.",
+      "slot": "TE"
+    },
+    {
+      "id": "11_5_4373626_RB",
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 5,
+      "player": "Tyler Allgeier",
+      "slot": "RB"
+    },
+    {
+      "id": "12_5_3929630_RB",
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 5,
+      "player": "Saquon Barkley",
+      "slot": "RB"
+    },
+    {
+      "id": "12_5_4871023_WR",
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 5,
+      "player": "Carnell Tate",
+      "slot": "WR"
+    },
+    {
       "id": "2_5_4241389_WR",
       "team_id": 2,
       "team": "Robs Team",
       "week": 5,
       "player": "CeeDee Lamb",
       "slot": "WR"
+    },
+    {
+      "id": "3_5_3915416_WR",
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 5,
+      "player": "DJ Moore",
+      "slot": "WR"
+    },
+    {
+      "id": "11_6_4239993_WR",
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 6,
+      "player": "Tee Higgins",
+      "slot": "WR"
+    },
+    {
+      "id": "11_6_4569603_RB/WR/TE",
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 6,
+      "player": "Malik Washington",
+      "slot": "RB/WR/TE"
+    },
+    {
+      "id": "6_6_4430027_TE",
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 6,
+      "player": "Sam LaPorta",
+      "slot": "TE"
+    },
+    {
+      "id": "4_6_4429795_RB",
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 6,
+      "player": "Jahmyr Gibbs",
+      "slot": "RB"
+    },
+    {
+      "id": "4_6_4362238_RB",
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 6,
+      "player": "Chase Brown",
+      "slot": "RB"
+    },
+    {
+      "id": "4_6_3915511_QB",
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 6,
+      "player": "Joe Burrow",
+      "slot": "QB"
+    },
+    {
+      "id": "4_6_4426388_WR",
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 6,
+      "player": "Jameson Williams",
+      "slot": "WR"
+    },
+    {
+      "id": "7_6_4360234_K",
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 6,
+      "player": "Evan McPherson",
+      "slot": "K"
+    },
+    {
+      "id": "3_6_4567104_K",
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 6,
+      "player": "Will Reichard",
+      "slot": "K"
+    },
+    {
+      "id": "1_6_4262921_WR",
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 6,
+      "player": "Justin Jefferson",
+      "slot": "WR"
+    },
+    {
+      "id": "1_6_3917315_QB",
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 6,
+      "player": "Kyler Murray",
+      "slot": "QB"
+    },
+    {
+      "id": "1_6_3042519_RB",
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 6,
+      "player": "Aaron Jones Sr.",
+      "slot": "RB"
+    },
+    {
+      "id": "1_6_-16004_D/ST",
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 6,
+      "player": "Bengals D/ST",
+      "slot": "D/ST"
+    },
+    {
+      "id": "13_6_4362628_WR",
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 6,
+      "player": "Ja'Marr Chase",
+      "slot": "WR"
+    },
+    {
+      "id": "13_6_4711533_RB",
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 6,
+      "player": "Ollie Gordon II",
+      "slot": "RB"
+    },
+    {
+      "id": "2_6_-16016_D/ST",
+      "team_id": 2,
+      "team": "Robs Team",
+      "week": 6,
+      "player": "Vikings D/ST",
+      "slot": "D/ST"
     }
   ],
   "close_calls": [
@@ -869,6 +1045,86 @@
       "points": 3.0
     },
     {
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 5,
+      "player": "DK Metcalf",
+      "slot": "RB/WR/TE",
+      "points": 2.0
+    },
+    {
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 5,
+      "player": "Tee Higgins",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 5,
+      "player": "Commanders D/ST",
+      "slot": "D/ST",
+      "points": 3.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 5,
+      "player": "Omarion Hampton",
+      "slot": "RB",
+      "points": 3.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 5,
+      "player": "Jaylen Waddle",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 5,
+      "player": "Steelers D/ST",
+      "slot": "D/ST",
+      "points": 1.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 5,
+      "player": "Kenyon Sadiq",
+      "slot": "TE",
+      "points": -2.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 5,
+      "player": "Tre' Harris",
+      "slot": "RB/WR/TE",
+      "points": 1.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 5,
+      "player": "Jeremiyah Love",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 5,
+      "player": "Rashid Shaheed",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
       "team_id": 10,
       "team": "Team Thunderpants",
       "week": 5,
@@ -877,12 +1133,92 @@
       "points": 1.0
     },
     {
+      "team_id": 10,
+      "team": "Team Thunderpants",
+      "week": 5,
+      "player": "Romeo Doubs",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 5,
+      "player": "Chase Brown",
+      "slot": "RB",
+      "points": 3.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 5,
+      "player": "George Kittle",
+      "slot": "TE",
+      "points": 2.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 5,
+      "player": "TreVeyon Henderson",
+      "slot": "RB/WR/TE",
+      "points": 3.0
+    },
+    {
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 5,
+      "player": "Eagles D/ST",
+      "slot": "D/ST",
+      "points": 1.0
+    },
+    {
+      "team_id": 9,
+      "team": "Maye-be in Trouble",
+      "week": 5,
+      "player": "Keaton Mitchell",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 5,
+      "player": "Bears D/ST",
+      "slot": "D/ST",
+      "points": -2.0
+    },
+    {
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 5,
+      "player": "Michael Wilson",
+      "slot": "RB/WR/TE",
+      "points": 3.0
+    },
+    {
       "team_id": 13,
       "team": "Team ThunderCats",
       "week": 5,
       "player": "Cowboys D/ST",
       "slot": "D/ST",
       "points": -2.0
+    },
+    {
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 5,
+      "player": "David Montgomery",
+      "slot": "RB",
+      "points": 1.0
+    },
+    {
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 5,
+      "player": "Colston Loveland",
+      "slot": "TE",
+      "points": 1.0
     }
   ]
 }
