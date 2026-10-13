@@ -1,6 +1,18 @@
 """
 Generates docs/data.json: the full season's history of zero-point starters
-(plus near-misses, team logos and owners), recomputed fresh from ESPN on every run.
+(plus near-misses and team logos), recomputed fresh from ESPN on every run.
+
+Meant to run on a schedule via GitHub Actions (see the workflow file), which
+commits the updated data.json back to the repo -- GitHub Pages then serves
+the refreshed file automatically, no separate deploy step needed.
+
+Required environment variables:
+    ESPN_LEAGUE_ID   - your league's numeric ID (from the league URL)
+    ESPN_YEAR        - season year, e.g. 2026
+
+Only needed if your league is PRIVATE:
+    ESPN_S2          - value of the espn_s2 cookie
+    ESPN_SWID        - value of the SWID cookie (include the curly braces)
 """
 
 import os
@@ -13,6 +25,7 @@ YEAR = int(os.environ.get("ESPN_YEAR", 2026))
 ESPN_S2 = os.environ.get("ESPN_S2") or None
 ESPN_SWID = os.environ.get("ESPN_SWID") or None
 
+# Bench/IR-type slots to ignore -- these players didn't "start"
 NON_STARTING_SLOTS = {"BE", "IR", "IR+"}
 
 # Starters who scored within this many points of zero (either direction,
@@ -55,6 +68,8 @@ def collect_entries(league: League):
     risk of duplicate or stale entries. Returns (zeros, close_calls)."""
     zeros = []
     close_calls = []
+    # Include the current week too: a starter only counts once their game is
+    # over (game_played == 100), so scanning a week in progress is safe.
     last_week = min(league.current_week, 18)
 
     for week in range(1, last_week + 1):
@@ -74,6 +89,10 @@ def collect_entries(league: League):
                     continue
                 for player in lineup:
                     if player.slot_position in NON_STARTING_SLOTS:
+                        continue
+                    # A player on a bye week never played, so their 0 isn't a
+                    # real zero (ESPN reports bye players as game_played=100).
+                    if getattr(player, "on_bye_week", False):
                         continue
                     game_played = getattr(player, "game_played", 100)
                     if game_played != 100:
