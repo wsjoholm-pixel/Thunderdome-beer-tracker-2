@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-16T17:18:19.118039+00:00",
+  "generated_at": "2026-10-20T17:48:42.368442+00:00",
   "league_id": 1515310,
   "year": 2026,
-  "current_week": 6,
+  "current_week": 7,
   "teams": [
     {
       "id": 1,
@@ -83,7 +83,7 @@
     },
     {
       "id": 9,
-      "name": "Maye-be in Trouble",
+      "name": "Like a Good Naber, K9 is There!",
       "logo": "https://g.espncdn.com/s/ffllm/logos/StarWarsTheForceAwakens-ToddDetwiler/ESPN_Star_Wars_05a.svg",
       "owners": [
         "sam grucky"
@@ -197,7 +197,7 @@
     {
       "id": "9_2_4595348_WR",
       "team_id": 9,
-      "team": "Maye-be in Trouble",
+      "team": "Like a Good Naber, K9 is There!",
       "week": 2,
       "player": "Malik Nabers",
       "slot": "WR"
@@ -205,7 +205,7 @@
     {
       "id": "9_2_3121023_TE",
       "team_id": 9,
-      "team": "Maye-be in Trouble",
+      "team": "Like a Good Naber, K9 is There!",
       "week": 2,
       "player": "Dallas Goedert",
       "slot": "TE"
@@ -309,7 +309,7 @@
     {
       "id": "9_4_3117256_TE",
       "team_id": 9,
-      "team": "Maye-be in Trouble",
+      "team": "Like a Good Naber, K9 is There!",
       "week": 4,
       "player": "Dalton Schultz",
       "slot": "TE"
@@ -369,6 +369,54 @@
       "week": 5,
       "player": "DJ Moore",
       "slot": "WR"
+    },
+    {
+      "id": "11_6_5083076_TE",
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 6,
+      "player": "Harold Fannin Jr.",
+      "slot": "TE"
+    },
+    {
+      "id": "6_6_3116365_TE",
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 6,
+      "player": "Mark Andrews",
+      "slot": "TE"
+    },
+    {
+      "id": "6_6_4241474_RB",
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 6,
+      "player": "Brian Robinson Jr.",
+      "slot": "RB"
+    },
+    {
+      "id": "3_6_3915416_WR",
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 6,
+      "player": "DJ Moore",
+      "slot": "WR"
+    },
+    {
+      "id": "10_6_4696981_RB/WR/TE",
+      "team_id": 10,
+      "team": "Team Thunderpants",
+      "week": 6,
+      "player": "Cam Skattebo",
+      "slot": "RB/WR/TE"
+    },
+    {
+      "id": "13_6_4596334_RB",
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 6,
+      "player": "Keaton Mitchell",
+      "slot": "RB"
     }
   ],
   "close_calls": [
@@ -478,7 +526,7 @@
     },
     {
       "team_id": 9,
-      "team": "Maye-be in Trouble",
+      "team": "Like a Good Naber, K9 is There!",
       "week": 1,
       "player": "Rico Dowdle",
       "slot": "RB/WR/TE",
@@ -486,7 +534,7 @@
     },
     {
       "team_id": 9,
-      "team": "Maye-be in Trouble",
+      "team": "Like a Good Naber, K9 is There!",
       "week": 1,
       "player": "Marvin Harrison Jr.",
       "slot": "WR",
@@ -798,7 +846,7 @@
     },
     {
       "team_id": 9,
-      "team": "Maye-be in Trouble",
+      "team": "Like a Good Naber, K9 is There!",
       "week": 3,
       "player": "Tetairoa McMillan",
       "slot": "WR",
@@ -806,7 +854,7 @@
     },
     {
       "team_id": 9,
-      "team": "Maye-be in Trouble",
+      "team": "Like a Good Naber, K9 is There!",
       "week": 3,
       "player": "Dalton Schultz",
       "slot": "TE",
@@ -1046,7 +1094,7 @@
     },
     {
       "team_id": 9,
-      "team": "Maye-be in Trouble",
+      "team": "Like a Good Naber, K9 is There!",
       "week": 5,
       "player": "Keaton Mitchell",
       "slot": "RB",
@@ -1091,6 +1139,134 @@
       "player": "Colston Loveland",
       "slot": "TE",
       "points": 1.0
+    },
+    {
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 6,
+      "player": "Rome Odunze",
+      "slot": "WR",
+      "points": 3.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 6,
+      "player": "Terry McLaurin",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 6,
+      "player": "Brandon Aubrey",
+      "slot": "K",
+      "points": 1.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 6,
+      "player": "TreVeyon Henderson",
+      "slot": "RB",
+      "points": 1.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 6,
+      "player": "Texans D/ST",
+      "slot": "D/ST",
+      "points": -2.0
+    },
+    {
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 6,
+      "player": "Dalton Kincaid",
+      "slot": "TE",
+      "points": 3.0
+    },
+    {
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 6,
+      "player": "Dontayvion Wicks",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 6,
+      "player": "Omarion Hampton",
+      "slot": "RB/WR/TE",
+      "points": 3.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 6,
+      "player": "Pat Freiermuth",
+      "slot": "TE",
+      "points": 1.0
+    },
+    {
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 6,
+      "player": "Derrick Henry",
+      "slot": "RB",
+      "points": 3.0
+    },
+    {
+      "team_id": 10,
+      "team": "Team Thunderpants",
+      "week": 6,
+      "player": "Rams D/ST",
+      "slot": "D/ST",
+      "points": 2.0
+    },
+    {
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 6,
+      "player": "Tyler Loop",
+      "slot": "K",
+      "points": 3.0
+    },
+    {
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 6,
+      "player": "Davante Adams",
+      "slot": "RB/WR/TE",
+      "points": 3.0
+    },
+    {
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 6,
+      "player": "Kenny Gainwell",
+      "slot": "RB",
+      "points": 1.0
+    },
+    {
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 6,
+      "player": "Eagles D/ST",
+      "slot": "D/ST",
+      "points": 1.0
+    },
+    {
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 6,
+      "player": "Rhamondre Stevenson",
+      "slot": "RB",
+      "points": 3.0
     }
   ]
 }
