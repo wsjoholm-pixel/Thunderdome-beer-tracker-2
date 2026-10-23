@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T17:48:42.368442+00:00",
+  "generated_at": "2026-10-23T17:49:35.405178+00:00",
   "league_id": 1515310,
   "year": 2026,
   "current_week": 7,
@@ -1267,6 +1267,14 @@
       "player": "Rhamondre Stevenson",
       "slot": "RB",
       "points": 3.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 7,
+      "player": "TreVeyon Henderson",
+      "slot": "RB/WR/TE",
+      "points": 1.0
     }
   ]
 }
