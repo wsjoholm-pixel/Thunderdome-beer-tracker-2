@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-23T17:49:35.405178+00:00",
+  "generated_at": "2026-10-27T18:34:41.389965+00:00",
   "league_id": 1515310,
   "year": 2026,
-  "current_week": 7,
+  "current_week": 8,
   "teams": [
     {
       "id": 1,
@@ -417,6 +417,62 @@
       "week": 6,
       "player": "Keaton Mitchell",
       "slot": "RB"
+    },
+    {
+      "id": "4_7_-16034_D/ST",
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 7,
+      "player": "Texans D/ST",
+      "slot": "D/ST"
+    },
+    {
+      "id": "11_7_4258173_WR",
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 7,
+      "player": "Nico Collins",
+      "slot": "WR"
+    },
+    {
+      "id": "6_7_4870808_RB",
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 7,
+      "player": "Jeremiyah Love",
+      "slot": "RB"
+    },
+    {
+      "id": "8_7_-16020_D/ST",
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 7,
+      "player": "Jets D/ST",
+      "slot": "D/ST"
+    },
+    {
+      "id": "3_7_-16010_D/ST",
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 7,
+      "player": "Titans D/ST",
+      "slot": "D/ST"
+    },
+    {
+      "id": "12_7_16800_RB/WR/TE",
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 7,
+      "player": "Davante Adams",
+      "slot": "RB/WR/TE"
+    },
+    {
+      "id": "12_7_4695883_WR",
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 7,
+      "player": "Jalen Coker",
+      "slot": "WR"
     }
   ],
   "close_calls": [
@@ -1272,8 +1328,128 @@
       "team_id": 4,
       "team": "Booty  Goon Squad",
       "week": 7,
+      "player": "Garrett Wilson",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 7,
       "player": "TreVeyon Henderson",
       "slot": "RB/WR/TE",
+      "points": 1.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 7,
+      "player": "Spencer Shrader",
+      "slot": "K",
+      "points": 3.0
+    },
+    {
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 7,
+      "player": "Chiefs D/ST",
+      "slot": "D/ST",
+      "points": -1.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 7,
+      "player": "Sam LaPorta",
+      "slot": "TE",
+      "points": 1.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 7,
+      "player": "Xavier Worthy",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team_id": 9,
+      "team": "Like a Good Naber, K9 is There!",
+      "week": 7,
+      "player": "Ryan Fitzgerald",
+      "slot": "K",
+      "points": 1.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 7,
+      "player": "Jordan Addison",
+      "slot": "RB/WR/TE",
+      "points": 2.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 7,
+      "player": "Pat Freiermuth",
+      "slot": "TE",
+      "points": 2.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 7,
+      "player": "Dominic Zvada",
+      "slot": "K",
+      "points": 1.0
+    },
+    {
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 7,
+      "player": "Aaron Jones Sr.",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 7,
+      "player": "Broncos D/ST",
+      "slot": "D/ST",
+      "points": 3.0
+    },
+    {
+      "team_id": 10,
+      "team": "Team Thunderpants",
+      "week": 7,
+      "player": "Rams D/ST",
+      "slot": "D/ST",
+      "points": 1.0
+    },
+    {
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 7,
+      "player": "Matthew Golden",
+      "slot": "RB/WR/TE",
+      "points": 3.0
+    },
+    {
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 7,
+      "player": "Ravens D/ST",
+      "slot": "D/ST",
+      "points": -3.0
+    },
+    {
+      "team_id": 2,
+      "team": "Robs Team",
+      "week": 7,
+      "player": "Isaiah Likely",
+      "slot": "TE",
       "points": 1.0
     }
   ]
