@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-30T18:31:40.020154+00:00",
+  "generated_at": "2026-11-03T19:58:41.941823+00:00",
   "league_id": 1515310,
   "year": 2026,
-  "current_week": 8,
+  "current_week": 9,
   "teams": [
     {
       "id": 1,
@@ -473,6 +473,78 @@
       "week": 7,
       "player": "Jalen Coker",
       "slot": "WR"
+    },
+    {
+      "id": "11_8_4427366_RB",
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 8,
+      "player": "Breece Hall",
+      "slot": "RB"
+    },
+    {
+      "id": "3_8_4429615_WR",
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 8,
+      "player": "Zay Flowers",
+      "slot": "WR"
+    },
+    {
+      "id": "3_8_4567104_K",
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 8,
+      "player": "Will Reichard",
+      "slot": "K"
+    },
+    {
+      "id": "3_8_4428718_WR",
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 8,
+      "player": "Tre Tucker",
+      "slot": "WR"
+    },
+    {
+      "id": "3_8_4360248_RB/WR/TE",
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 8,
+      "player": "Kyle Pitts Sr.",
+      "slot": "RB/WR/TE"
+    },
+    {
+      "id": "13_8_4426502_WR",
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 8,
+      "player": "Drake London",
+      "slot": "WR"
+    },
+    {
+      "id": "8_8_4047650_WR",
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 8,
+      "player": "DK Metcalf",
+      "slot": "WR"
+    },
+    {
+      "id": "7_8_4723820_WR",
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 8,
+      "player": "Omar Cooper Jr.",
+      "slot": "WR"
+    },
+    {
+      "id": "12_8_3916387_QB",
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 8,
+      "player": "Lamar Jackson",
+      "slot": "QB"
     }
   ],
   "close_calls": [
@@ -1451,6 +1523,158 @@
       "player": "Isaiah Likely",
       "slot": "TE",
       "points": 1.0
+    },
+    {
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 8,
+      "player": "Jordan Mason",
+      "slot": "RB/WR/TE",
+      "points": 2.0
+    },
+    {
+      "team_id": 9,
+      "team": "Like a Good Naber, K9 is There!",
+      "week": 8,
+      "player": "Zach Charbonnet",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team_id": 9,
+      "team": "Like a Good Naber, K9 is There!",
+      "week": 8,
+      "player": "Browns D/ST",
+      "slot": "D/ST",
+      "points": 2.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 8,
+      "player": "Spencer Shrader",
+      "slot": "K",
+      "points": 1.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 8,
+      "player": "Chiefs D/ST",
+      "slot": "D/ST",
+      "points": 2.0
+    },
+    {
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 8,
+      "player": "Tyler Loop",
+      "slot": "K",
+      "points": 3.0
+    },
+    {
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 8,
+      "player": "Broncos D/ST",
+      "slot": "D/ST",
+      "points": 1.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 8,
+      "player": "Jonathan Taylor",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 8,
+      "player": "Jeremiyah Love",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 8,
+      "player": "Sam LaPorta",
+      "slot": "TE",
+      "points": 3.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 8,
+      "player": "Xavier Worthy",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 8,
+      "player": "Michael Penix Jr.",
+      "slot": "QB",
+      "points": -2.0
+    },
+    {
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 8,
+      "player": "Tyler Warren",
+      "slot": "TE",
+      "points": 1.0
+    },
+    {
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 8,
+      "player": "Jason Myers",
+      "slot": "K",
+      "points": 2.0
+    },
+    {
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 8,
+      "player": "Bengals D/ST",
+      "slot": "D/ST",
+      "points": 2.0
+    },
+    {
+      "team_id": 2,
+      "team": "Robs Team",
+      "week": 8,
+      "player": "Parker Washington",
+      "slot": "RB/WR/TE",
+      "points": 2.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 8,
+      "player": "Omarion Hampton",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 8,
+      "player": "KC Concepcion",
+      "slot": "RB/WR/TE",
+      "points": 3.0
+    },
+    {
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 8,
+      "player": "Hunter Henry",
+      "slot": "TE",
+      "points": 3.0
     }
   ]
 }
