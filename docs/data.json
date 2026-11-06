@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T19:58:41.941823+00:00",
+  "generated_at": "2026-11-06T19:55:07.441195+00:00",
   "league_id": 1515310,
   "year": 2026,
   "current_week": 9,
@@ -1675,6 +1675,22 @@
       "player": "Hunter Henry",
       "slot": "TE",
       "points": 3.0
+    },
+    {
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 9,
+      "player": "Zay Flowers",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team_id": 9,
+      "team": "Like a Good Naber, K9 is There!",
+      "week": 9,
+      "player": "Brenton Strange",
+      "slot": "TE",
+      "points": 2.0
     }
   ]
 }
