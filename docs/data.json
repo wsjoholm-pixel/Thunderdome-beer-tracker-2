@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T20:17:50.429578+00:00",
+  "generated_at": "2026-11-13T20:25:27.581251+00:00",
   "league_id": 1515310,
   "year": 2026,
   "current_week": 10,
@@ -1841,6 +1841,22 @@
       "team": "Team Thunderpants",
       "week": 9,
       "player": "Keenan Allen",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 10,
+      "player": "Dominic Zvada",
+      "slot": "K",
+      "points": 2.0
+    },
+    {
+      "team_id": 9,
+      "team": "Like a Good Naber, K9 is There!",
+      "week": 10,
+      "player": "Malik Nabers",
       "slot": "WR",
       "points": 2.0
     }
