@@ -372,7 +372,7 @@ const firebaseConfig = {
 // Example:  const INCLUDED_OWNERS = ["Sam Smith", "Rob Jones"];
 // Leave the list empty to show every team in the league.
 // ---------------------------------------------------------------------------
-const INCLUDED_OWNERS = ["Wes Sjoholm","Joshua Phillips","Sam Grucky","travis addante","Andrew Lowe","Rob Semanchik"];
+const INCLUDED_OWNERS = [];
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -455,7 +455,7 @@ function render() {
   const meta = document.getElementById('metaLine');
   if (seasonData.generated_at) {
     const dt = new Date(seasonData.generated_at);
-        meta.textContent = `Week ${seasonData.current_week != null ? seasonData.current_week : '—'}, finished games only · updated ${dt.toLocaleString()}`;
+    meta.textContent = `Week ${seasonData.current_week != null ? seasonData.current_week : '—'}, finished games only · updated ${dt.toLocaleString()}`;
   } else {
     meta.textContent = 'Waiting on the first automated pull from ESPN.';
   }
@@ -655,6 +655,9 @@ async function loadSeasonData() {
     const res = await fetch('./data.json', { cache: 'no-store' });
     seasonData = await res.json();
     if (!seasonData.close_calls) seasonData.close_calls = [];
+    // Firestore treats "/" as a path separator, so defense slots like "D/ST"
+    // would break the document id. Swap it for a safe character.
+    (seasonData.entries || []).forEach(e => { e.id = String(e.id).replace(/\//g, '-'); });
   } catch (e) {
     document.getElementById('metaLine').textContent = 'Could not load data.json.';
   }
