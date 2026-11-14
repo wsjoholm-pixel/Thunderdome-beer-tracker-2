@@ -99,7 +99,8 @@ def collect_entries(league: League):
                         continue
 
                     if player.points == 0:
-                        entry_id = f"{team.team_id}_{week}_{getattr(player, 'playerId', player.name)}_{player.slot_position}"
+                        # "/" would break Firestore document ids (e.g. slot "D/ST")
+                        entry_id = f"{team.team_id}_{week}_{getattr(player, 'playerId', player.name)}_{player.slot_position}".replace("/", "-")
                         zeros.append({
                             "id": entry_id,
                             "team_id": team.team_id,
