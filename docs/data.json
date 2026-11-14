@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T20:25:27.581251+00:00",
+  "generated_at": "2026-11-14T00:02:50.229814+00:00",
   "league_id": 1515310,
   "year": 2026,
   "current_week": 10,
@@ -147,7 +147,7 @@
       "slot": "TE"
     },
     {
-      "id": "10_1_-16024_D/ST",
+      "id": "10_1_-16024_D-ST",
       "team_id": 10,
       "team": "Team Thunderpants",
       "week": 1,
@@ -155,7 +155,7 @@
       "slot": "D/ST"
     },
     {
-      "id": "7_1_4372016_RB/WR/TE",
+      "id": "7_1_4372016_RB-WR-TE",
       "team_id": 7,
       "team": "Team Autopilot",
       "week": 1,
@@ -171,7 +171,7 @@
       "slot": "TE"
     },
     {
-      "id": "1_2_4426515_RB/WR/TE",
+      "id": "1_2_4426515_RB-WR-TE",
       "team_id": 1,
       "team": "Fantasy Football Team",
       "week": 2,
@@ -211,7 +211,7 @@
       "slot": "TE"
     },
     {
-      "id": "11_3_4432773_RB/WR/TE",
+      "id": "11_3_4432773_RB-WR-TE",
       "team_id": 11,
       "team": "Dumpster Fire",
       "week": 3,
@@ -235,7 +235,7 @@
       "slot": "TE"
     },
     {
-      "id": "8_3_4242433_RB/WR/TE",
+      "id": "8_3_4242433_RB-WR-TE",
       "team_id": 8,
       "team": "Gruck Around and Find Out",
       "week": 3,
@@ -243,7 +243,7 @@
       "slot": "RB/WR/TE"
     },
     {
-      "id": "13_3_-16025_D/ST",
+      "id": "13_3_-16025_D-ST",
       "team_id": 13,
       "team": "Team ThunderCats",
       "week": 3,
@@ -251,7 +251,7 @@
       "slot": "D/ST"
     },
     {
-      "id": "1_3_-16004_D/ST",
+      "id": "1_3_-16004_D-ST",
       "team_id": 1,
       "team": "Fantasy Football Team",
       "week": 3,
@@ -403,7 +403,7 @@
       "slot": "WR"
     },
     {
-      "id": "10_6_4696981_RB/WR/TE",
+      "id": "10_6_4696981_RB-WR-TE",
       "team_id": 10,
       "team": "Team Thunderpants",
       "week": 6,
@@ -419,7 +419,7 @@
       "slot": "RB"
     },
     {
-      "id": "4_7_-16034_D/ST",
+      "id": "4_7_-16034_D-ST",
       "team_id": 4,
       "team": "Booty  Goon Squad",
       "week": 7,
@@ -443,7 +443,7 @@
       "slot": "RB"
     },
     {
-      "id": "8_7_-16020_D/ST",
+      "id": "8_7_-16020_D-ST",
       "team_id": 8,
       "team": "Gruck Around and Find Out",
       "week": 7,
@@ -451,7 +451,7 @@
       "slot": "D/ST"
     },
     {
-      "id": "3_7_-16010_D/ST",
+      "id": "3_7_-16010_D-ST",
       "team_id": 3,
       "team": "Grit City Bridge Builders",
       "week": 7,
@@ -459,7 +459,7 @@
       "slot": "D/ST"
     },
     {
-      "id": "12_7_16800_RB/WR/TE",
+      "id": "12_7_16800_RB-WR-TE",
       "team_id": 12,
       "team": "Team ShowHome",
       "week": 7,
@@ -507,7 +507,7 @@
       "slot": "WR"
     },
     {
-      "id": "3_8_4360248_RB/WR/TE",
+      "id": "3_8_4360248_RB-WR-TE",
       "team_id": 3,
       "team": "Grit City Bridge Builders",
       "week": 8,
@@ -555,7 +555,7 @@
       "slot": "RB"
     },
     {
-      "id": "6_9_4241474_RB/WR/TE",
+      "id": "6_9_4241474_RB-WR-TE",
       "team_id": 6,
       "team": "Team Smelliot",
       "week": 9,
