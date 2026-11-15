@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T00:02:50.229814+00:00",
+  "generated_at": "2026-11-15T18:34:34.893908+00:00",
   "league_id": 1515310,
   "year": 2026,
   "current_week": 10,
@@ -576,6 +576,14 @@
       "team": "Robs Team",
       "week": 9,
       "player": "George Pickens",
+      "slot": "WR"
+    },
+    {
+      "id": "8_10_4427095_WR",
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 10,
+      "player": "DeMario Douglas",
       "slot": "WR"
     }
   ],
@@ -1859,6 +1867,46 @@
       "player": "Malik Nabers",
       "slot": "WR",
       "points": 2.0
+    },
+    {
+      "team_id": 9,
+      "team": "Like a Good Naber, K9 is There!",
+      "week": 10,
+      "player": "Drake Maye",
+      "slot": "QB",
+      "points": 2.0
+    },
+    {
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 10,
+      "player": "Hunter Henry",
+      "slot": "TE",
+      "points": 2.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 10,
+      "player": "Corey Kiner",
+      "slot": "RB/WR/TE",
+      "points": 2.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 10,
+      "player": "A.J. Brown",
+      "slot": "RB/WR/TE",
+      "points": 2.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 10,
+      "player": "Sam LaPorta",
+      "slot": "TE",
+      "points": 1.0
     }
   ]
 }
