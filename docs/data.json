@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-15T18:34:34.893908+00:00",
+  "generated_at": "2026-11-17T21:32:01.385429+00:00",
   "league_id": 1515310,
   "year": 2026,
-  "current_week": 10,
+  "current_week": 11,
   "teams": [
     {
       "id": 1,
@@ -577,6 +577,46 @@
       "week": 9,
       "player": "George Pickens",
       "slot": "WR"
+    },
+    {
+      "id": "2_10_4362619_RB",
+      "team_id": 2,
+      "team": "Robs Team",
+      "week": 10,
+      "player": "Chris Rodriguez Jr.",
+      "slot": "RB"
+    },
+    {
+      "id": "12_10_4695883_WR",
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 10,
+      "player": "Jalen Coker",
+      "slot": "WR"
+    },
+    {
+      "id": "6_10_4683062_WR",
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 10,
+      "player": "Xavier Worthy",
+      "slot": "WR"
+    },
+    {
+      "id": "7_10_4367209_TE",
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 10,
+      "player": "Greg Dulcich",
+      "slot": "TE"
+    },
+    {
+      "id": "8_10_4431459_TE",
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 10,
+      "player": "Tyler Warren",
+      "slot": "TE"
     },
     {
       "id": "8_10_4427095_WR",
@@ -1861,6 +1901,54 @@
       "points": 2.0
     },
     {
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 10,
+      "player": "Christian Watson",
+      "slot": "WR",
+      "points": 3.0
+    },
+    {
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 10,
+      "player": "Trey McBride",
+      "slot": "TE",
+      "points": 3.0
+    },
+    {
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 10,
+      "player": "Jaguars D/ST",
+      "slot": "D/ST",
+      "points": 3.0
+    },
+    {
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 10,
+      "player": "Justice Hill",
+      "slot": "RB",
+      "points": 3.0
+    },
+    {
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 10,
+      "player": "Brock Bowers",
+      "slot": "TE",
+      "points": 1.0
+    },
+    {
+      "team_id": 2,
+      "team": "Robs Team",
+      "week": 10,
+      "player": "MarShawn Lloyd",
+      "slot": "RB",
+      "points": 3.0
+    },
+    {
       "team_id": 9,
       "team": "Like a Good Naber, K9 is There!",
       "week": 10,
@@ -1872,9 +1960,41 @@
       "team_id": 9,
       "team": "Like a Good Naber, K9 is There!",
       "week": 10,
+      "player": "Tetairoa McMillan",
+      "slot": "WR",
+      "points": 3.0
+    },
+    {
+      "team_id": 9,
+      "team": "Like a Good Naber, K9 is There!",
+      "week": 10,
       "player": "Drake Maye",
       "slot": "QB",
       "points": 2.0
+    },
+    {
+      "team_id": 9,
+      "team": "Like a Good Naber, K9 is There!",
+      "week": 10,
+      "player": "Rico Dowdle",
+      "slot": "RB/WR/TE",
+      "points": 2.0
+    },
+    {
+      "team_id": 9,
+      "team": "Like a Good Naber, K9 is There!",
+      "week": 10,
+      "player": "Darren Waller",
+      "slot": "TE",
+      "points": 2.0
+    },
+    {
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 10,
+      "player": "Jakobi Meyers",
+      "slot": "WR",
+      "points": 3.0
     },
     {
       "team_id": 12,
@@ -1885,12 +2005,36 @@
       "points": 2.0
     },
     {
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 10,
+      "player": "Wan'Dale Robinson",
+      "slot": "RB/WR/TE",
+      "points": 1.0
+    },
+    {
       "team_id": 4,
       "team": "Booty  Goon Squad",
       "week": 10,
       "player": "Corey Kiner",
       "slot": "RB/WR/TE",
       "points": 2.0
+    },
+    {
+      "team_id": 10,
+      "team": "Team Thunderpants",
+      "week": 10,
+      "player": "Travis Kelce",
+      "slot": "TE",
+      "points": 3.0
+    },
+    {
+      "team_id": 10,
+      "team": "Team Thunderpants",
+      "week": 10,
+      "player": "Jaylen Warren",
+      "slot": "RB",
+      "points": 3.0
     },
     {
       "team_id": 6,
@@ -1907,6 +2051,46 @@
       "player": "Sam LaPorta",
       "slot": "TE",
       "points": 1.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 10,
+      "player": "Chris Olave",
+      "slot": "WR",
+      "points": 3.0
+    },
+    {
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 10,
+      "player": "Tank Dell",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 10,
+      "player": "Kyren Williams",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 10,
+      "player": "Jason Myers",
+      "slot": "K",
+      "points": 2.0
+    },
+    {
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 10,
+      "player": "49ers D/ST",
+      "slot": "D/ST",
+      "points": -1.0
     }
   ]
 }
