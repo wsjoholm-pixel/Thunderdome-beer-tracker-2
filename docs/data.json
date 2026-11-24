@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-20T20:59:28.352752+00:00",
+  "generated_at": "2026-11-24T22:55:56.812796+00:00",
   "league_id": 1515310,
   "year": 2026,
-  "current_week": 11,
+  "current_week": 12,
   "teams": [
     {
       "id": 1,
@@ -625,6 +625,78 @@
       "week": 10,
       "player": "DeMario Douglas",
       "slot": "WR"
+    },
+    {
+      "id": "13_11_4241985_RB",
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 11,
+      "player": "J.K. Dobbins",
+      "slot": "RB"
+    },
+    {
+      "id": "11_11_4047650_RB-WR-TE",
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 11,
+      "player": "DK Metcalf",
+      "slot": "RB/WR/TE"
+    },
+    {
+      "id": "11_11_4429086_TE",
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 11,
+      "player": "Michael Mayer",
+      "slot": "TE"
+    },
+    {
+      "id": "2_11_-16016_D-ST",
+      "team_id": 2,
+      "team": "Robs Team",
+      "week": 11,
+      "player": "Vikings D/ST",
+      "slot": "D/ST"
+    },
+    {
+      "id": "3_11_3929645_TE",
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 11,
+      "player": "Juwan Johnson",
+      "slot": "TE"
+    },
+    {
+      "id": "9_11_3128429_RB-WR-TE",
+      "team_id": 9,
+      "team": "Goff Darnit",
+      "week": 11,
+      "player": "Courtland Sutton",
+      "slot": "RB/WR/TE"
+    },
+    {
+      "id": "10_11_-16004_D-ST",
+      "team_id": 10,
+      "team": "Team Thunderpants",
+      "week": 11,
+      "player": "Bengals D/ST",
+      "slot": "D/ST"
+    },
+    {
+      "id": "7_11_4880281_WR",
+      "team_id": 7,
+      "team": "Team Autopilot",
+      "week": 11,
+      "player": "Jordyn Tyson",
+      "slot": "WR"
+    },
+    {
+      "id": "8_11_4243331_TE",
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 11,
+      "player": "Cade Otton",
+      "slot": "TE"
     }
   ],
   "close_calls": [
@@ -2093,12 +2165,124 @@
       "points": -1.0
     },
     {
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 11,
+      "player": "Ja'Marr Chase",
+      "slot": "WR",
+      "points": 3.0
+    },
+    {
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 11,
+      "player": "Emeka Egbuka",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 11,
+      "player": "Jordan Mason",
+      "slot": "RB",
+      "points": 3.0
+    },
+    {
+      "team_id": 11,
+      "team": "Dumpster Fire",
+      "week": 11,
+      "player": "Chase McLaughlin",
+      "slot": "K",
+      "points": 3.0
+    },
+    {
+      "team_id": 2,
+      "team": "Robs Team",
+      "week": 11,
+      "player": "Isaiah Likely",
+      "slot": "TE",
+      "points": 3.0
+    },
+    {
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 11,
+      "player": "Will Reichard",
+      "slot": "K",
+      "points": 3.0
+    },
+    {
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 11,
+      "player": "Luther Burden III",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
       "team_id": 12,
       "team": "Team ShowHome",
       "week": 11,
       "player": "Dalton Schultz",
       "slot": "TE",
       "points": 1.0
+    },
+    {
+      "team_id": 9,
+      "team": "Goff Darnit",
+      "week": 11,
+      "player": "Rico Dowdle",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team_id": 9,
+      "team": "Goff Darnit",
+      "week": 11,
+      "player": "Dawson Knox",
+      "slot": "TE",
+      "points": 3.0
+    },
+    {
+      "team_id": 10,
+      "team": "Team Thunderpants",
+      "week": 11,
+      "player": "Jaylen Warren",
+      "slot": "RB",
+      "points": 2.0
+    },
+    {
+      "team_id": 10,
+      "team": "Team Thunderpants",
+      "week": 11,
+      "player": "Keenan Allen",
+      "slot": "WR",
+      "points": 3.0
+    },
+    {
+      "team_id": 10,
+      "team": "Team Thunderpants",
+      "week": 11,
+      "player": "Elic Ayomanor",
+      "slot": "WR",
+      "points": 2.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 11,
+      "player": "Chase Brown",
+      "slot": "RB",
+      "points": 3.0
+    },
+    {
+      "team_id": 4,
+      "team": "Booty  Goon Squad",
+      "week": 11,
+      "player": "Garrett Wilson",
+      "slot": "RB/WR/TE",
+      "points": 3.0
     },
     {
       "team_id": 4,
@@ -2115,6 +2299,30 @@
       "player": "Jonathan Taylor",
       "slot": "RB",
       "points": 2.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 11,
+      "player": "Mark Andrews",
+      "slot": "RB/WR/TE",
+      "points": 1.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 11,
+      "player": "Adonai Mitchell",
+      "slot": "WR",
+      "points": 3.0
+    },
+    {
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 11,
+      "player": "Treylon Burks",
+      "slot": "WR",
+      "points": 3.0
     },
     {
       "team_id": 8,
