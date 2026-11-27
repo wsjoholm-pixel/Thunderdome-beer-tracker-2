@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T22:55:56.812796+00:00",
+  "generated_at": "2026-11-27T21:53:16.473082+00:00",
   "league_id": 1515310,
   "year": 2026,
   "current_week": 12,
@@ -697,6 +697,38 @@
       "week": 11,
       "player": "Cade Otton",
       "slot": "TE"
+    },
+    {
+      "id": "12_12_3929630_RB",
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 12,
+      "player": "Saquon Barkley",
+      "slot": "RB"
+    },
+    {
+      "id": "12_12_-16008_D-ST",
+      "team_id": 12,
+      "team": "Team ShowHome",
+      "week": 12,
+      "player": "Lions D/ST",
+      "slot": "D/ST"
+    },
+    {
+      "id": "9_12_3121023_TE",
+      "team_id": 9,
+      "team": "Goff Darnit",
+      "week": 12,
+      "player": "Dallas Goedert",
+      "slot": "TE"
+    },
+    {
+      "id": "6_12_4683062_WR",
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 12,
+      "player": "Xavier Worthy",
+      "slot": "WR"
     }
   ],
   "close_calls": [
@@ -2330,6 +2362,62 @@
       "week": 11,
       "player": "Emari Demercado",
       "slot": "RB",
+      "points": 3.0
+    },
+    {
+      "team_id": 13,
+      "team": "Team ThunderCats",
+      "week": 12,
+      "player": "Matthew Golden",
+      "slot": "WR",
+      "points": 3.0
+    },
+    {
+      "team_id": 10,
+      "team": "Team Thunderpants",
+      "week": 12,
+      "player": "Josh Allen",
+      "slot": "QB",
+      "points": 3.0
+    },
+    {
+      "team_id": 1,
+      "team": "Fantasy Football Team",
+      "week": 12,
+      "player": "Colston Loveland",
+      "slot": "TE",
+      "points": -2.0
+    },
+    {
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 12,
+      "player": "DJ Moore",
+      "slot": "RB/WR/TE",
+      "points": 1.0
+    },
+    {
+      "team_id": 3,
+      "team": "Grit City Bridge Builders",
+      "week": 12,
+      "player": "Josh Downs",
+      "slot": "WR",
+      "points": 1.0
+    },
+    {
+      "team_id": 8,
+      "team": "Gruck Around and Find Out",
+      "week": 12,
+      "player": "Dalton Kincaid",
+      "slot": "TE",
+      "points": 1.0
+    },
+    {
+      "team_id": 6,
+      "team": "Team Smelliot",
+      "week": 12,
+      "player": "Matthew Stafford",
+      "slot": "QB",
       "points": 3.0
     }
   ]
